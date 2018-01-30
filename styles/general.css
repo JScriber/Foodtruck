@@ -116,8 +116,45 @@ section > article.shown
 }
 
 
+/* Pied de page */
 footer 
 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	height: 180px;
 	background-color: #F4511E;
+}
+footer ul
+{
+	list-style-type: none;
+}
+footer ul:first-child
+{
+	margin-left: 28px;
+}
+footer ul:last-child
+{
+	margin-right: 28px;
+}
+
+
+footer ul li
+{
+	padding: 10px 0;
+}
+footer ul:last-child li
+{
+	padding: 5px 0;
+}
+footer ul li, footer a
+{
+	color: #fff;
+	font-size: 15px;
+	font-weight: normal;
+	text-decoration: none;
+}
+footer ul li img
+{
+	height: 70px;
 }
