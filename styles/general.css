@@ -119,10 +119,21 @@ section > article.shown
 /* Pied de page */
 footer 
 {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: 180px;
+	background-color: #F4511E;
+}
+footer::before
+{
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 20%;
+	height: 2px;
+	width: 60%;
 	background-color: #F4511E;
 }
 footer ul
