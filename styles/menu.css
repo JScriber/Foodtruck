@@ -92,8 +92,20 @@
 {
 	margin-right: 0;
 }
-#ongletMenu li img
+#ongletMenu li svg
 {
-	height: 23px;
+	fill: #fff;
+	height: 20px;
+	margin-left: 3px;
 	margin-right: 12px;
+}
+
+#ongletMenu li.highlight
+{
+	color: #F4511E;
+	background-color: #fff;
+}
+#ongletMenu li.highlight svg
+{
+	fill: #F4511E;;
 }
