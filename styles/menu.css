@@ -12,6 +12,7 @@
 	align-items: center;
 	width: 100%;
 	padding: 10px 0;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
 }
 /* Image d'arrière plan */
 #ongletMenu nav::after,
@@ -47,18 +48,18 @@
 #ongletMenu nav h2
 {
 	color: #fff;
-	font-size: 40px;
+	font-size: 45px;
 	margin-top: 50px;
-	font-weight: medium;
+	font-weight: lighter;
 	text-transform: uppercase;
 	z-index: 100;
 }
 #ongletMenu nav > p
 {
 	color: #fff;
-	font-size: 20px;
-	max-width: 45%;
-	margin-top: 20px;
+	font-size: 18px;
+	max-width: 42%;
+	margin-top: 15px;
 	text-align: center;
 	font-weight: normal;
 	z-index: 100;
@@ -69,24 +70,29 @@
 	display: flex;
 	flex-flow: row nowrap;
 	height: 30px;
-	margin-top: 45px;
-	margin-bottom: 50px;
+	margin-top: 55px;
+	margin-bottom: 65px;
 	z-index: 100;
 }
 #ongletMenu li
 {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	height: 100%;
 	width: auto;
-	padding: 7px 15px;
+	padding: 10px 15px;
 	color: #fff;
-	font-size: 16px;
-	border-radius: 30px;
+	font-size: 15px;
+	border-radius: 4px;
 	border: 2px solid #fff;
 	text-transform: uppercase;
 	margin-right: 15px;
+	transition: background-color .15s linear 0s;
 }
 #ongletMenu li:last-child
 {
@@ -95,7 +101,7 @@
 #ongletMenu li svg
 {
 	fill: #fff;
-	height: 20px;
+	height: 18px;
 	margin-left: 3px;
 	margin-right: 12px;
 }
@@ -108,4 +114,17 @@
 #ongletMenu li.highlight svg
 {
 	fill: #F4511E;;
+}
+#ongletMenu li:hover
+{
+	background-color: rgba(255, 255, 255, .1);
+}
+#ongletMenu li.highlight:hover
+{
+	background-color: #fff;
+}
+
+#ongletMenu li:active
+{
+	transform: scale(.98);
 }
