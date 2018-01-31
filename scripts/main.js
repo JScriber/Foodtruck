@@ -34,4 +34,30 @@ window.addEventListener('load', function(){
 		}
 	});
 
+	// Navigation dans les cartes du Menu
+	var appelsRecette = document.querySelectorAll('.showRecipe');
+	var nombreAppels = appelsRecette.length;
+
+	for(var i = 0; i < nombreAppels; i++){
+		appelsRecette[i].addEventListener('click', function(e){
+			// Trouve la recette associée
+			var carte = e.currentTarget;
+			while(carte.tagName != "OL"){
+				carte = carte.parentNode;
+			}
+			var recette = carte.querySelector('.platRecette');
+			recette.classList.remove("hide");
+		});
+	}
+
+	var fermetureRecette = document.querySelectorAll('.closeRecipe');
+	var nombreFermetures = fermetureRecette.length;
+	for(var i = 0; i < nombreFermetures; i++){
+		fermetureRecette[i].addEventListener('click', function(e){
+			var recettes = e.currentTarget.parentNode;
+			recettes.classList.add('hide');
+		});
+	}
+
+
 });
