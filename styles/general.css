@@ -16,6 +16,11 @@
 	padding:0;
 	font-family: 'Roboto', sans-serif;
 }
+::selection
+{
+	background: #F4511E;
+	color: #fff;
+}
 
 header, section, footer
 {
