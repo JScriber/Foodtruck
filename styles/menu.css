@@ -204,6 +204,8 @@
 	justify-content: space-between;
 	width: 100%;
 	height: 48px;
+	background-color: #fff;
+	z-index: 500;
 }
 .platActions p
 {
@@ -315,10 +317,9 @@
 	transform: scale(.93);
 }
 
-
+/* Partie cachée affichant la recette du plat */
 .platRecette
 {
-	padding-top: 0;
 	z-index: 200;
 }
 .platRecette h3
@@ -346,4 +347,37 @@
 	margin-bottom: 3px;
 	font-weight: normal;
 	opacity: 1;
+}
+.platRecette > ol
+{
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+	flex-grow: 1;
+	height: auto;
+	margin-top: 20px;
+}
+.platRecette > ol li
+{
+	position: relative;
+	color: #000;
+	font-size: 16px;
+	padding: 10px 0;
+	margin-left: 5px;
+	padding-left: 50px;
+}
+
+.platRecette > ol li::before
+{
+	content: '';
+	position: absolute;
+	top: 13px;
+	left: 20px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-image: url('../images/icones/arrow.svg');
+
+	background-size: 12px;
+	background-repeat: no-repeat;
 }
