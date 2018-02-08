@@ -6,7 +6,7 @@
 
 
 \*********************************************************************/
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 *
@@ -18,7 +18,7 @@
 }
 ::selection
 {
-	background: #F4511E;
+	background: #FB8C00;
 	color: #fff;
 }
 
@@ -35,7 +35,7 @@ header
 	align-items: center;
 	justify-content: space-between;
 	height: 70px;
-	background-color: #F4511E;
+	background-color: #FB8C00;
 }
 header img
 {
@@ -59,6 +59,7 @@ header ul > li
 
 	height: 100%;
 	padding: 0 17px;
+	font-weight: medium;
 	margin-right: 5px;
 	color: #fff;
 	transition: all .2s linear 0s;
@@ -129,7 +130,7 @@ footer
 	align-items: center;
 	justify-content: space-between;
 	height: 180px;
-	background-color: #F4511E;
+	background-color: #FB8C00;
 }
 footer::before
 {
@@ -139,7 +140,7 @@ footer::before
 	left: 20%;
 	height: 2px;
 	width: 60%;
-	background-color: #F4511E;
+	background-color: #FB8C00;
 }
 footer ul
 {
