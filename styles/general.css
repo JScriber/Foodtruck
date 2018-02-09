@@ -41,6 +41,7 @@ header img
 {
 	height: 56px;
 	margin-left: 28px;
+	transition: all .2s linear 0s;
 }
 header ul
 {
@@ -174,4 +175,116 @@ footer ul li, footer a
 footer ul li img
 {
 	height: 70px;
+}
+
+
+@media screen and (max-width: 550px) {
+	header {
+		flex-flow: column wrap;
+		height: auto;
+	}
+	header img
+	{
+		height: 80px;
+		margin: 28px 0;
+	}
+	header ul
+	{
+		justify-content: center;
+		height: 80px;
+		width: 100%;
+		padding-right: 0;
+	}
+	header ul li
+	{
+		justify-content: center;
+		width: 33.333%;
+		padding: 0;
+		margin-right: 0;
+	}
+	header ul li:active
+	{
+		background-color: rgba(255, 255, 255, .1);
+	}
+	header ul > li.highlight::before
+	{
+		height: 4px;
+	}
+
+
+	footer
+	{
+		flex-flow: column wrap;
+		height: auto;
+	}
+	footer::before
+	{
+		display: none;
+	}
+	footer ul
+	{
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+	}
+	footer ul:first-child
+	{
+		margin-left: 0;
+	}
+	footer ul:last-child
+	{
+		margin-right: 0;
+	}
+	footer ul li
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10px;
+		text-align: center;
+		flex-grow: 1;
+		height: 80px;
+	}
+	footer ul:first-child
+	{
+		border-bottom: 2px dotted #fff;
+		margin-bottom: 40px;
+	}
+	footer ul:first-child li
+	{
+		width: 33.3333%;
+	}
+	footer ul:first-child li:active
+	{
+		background-color: rgba(255, 255, 255, .1);
+	}
+	footer ul:last-child
+	{
+		flex-flow: column wrap;
+	}
+	footer ul:last-child li
+	{
+		font-size: 25px;
+		height: 90px;
+	}
+	footer ul:last-child li:nth-child(2)
+	{
+		height: 30px;
+		margin-top: 20px;
+	}
+	footer ul:last-child li:nth-child(3)
+	{
+		display: none;
+	}
+	footer ul:last-child li:nth-child(4)
+	{
+		font-size: 16px;
+		height: 30px;
+		margin-bottom: 50px;
+	}
+	footer ul li img
+	{
+		height: 90px;
+	}
 }

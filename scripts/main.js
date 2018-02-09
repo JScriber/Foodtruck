@@ -1,4 +1,13 @@
 window.addEventListener('load', function(){
+	// A supprimer plus tard
+	var plat = document.querySelector('.plat'),
+	copie;
+	for(var i = 0; i < 10; i++) {
+		copie = plat.cloneNode(true);
+		plat.parentNode.appendChild(copie);
+	}
+
+
 
 	// Changement d'article (de morceau de page)
 	var liens = document.querySelector('header ul');
@@ -15,6 +24,7 @@ window.addEventListener('load', function(){
 		// Si l'article existe on l'affiche
 		if(articleDom){
 			var i;
+
 			// On cache tous les articles
 			var articlesDom = document.querySelectorAll('section > article');
 			var nombreArticles = articlesDom.length; // Bonne pratique
@@ -40,6 +50,15 @@ window.addEventListener('load', function(){
 
 	for(var i = 0; i < nombreAppels; i++){
 		appelsRecette[i].addEventListener('click', function(e){
+			// On cache avant tout les autres recettes
+			var autresRecettes = document.querySelectorAll('.platRecette');
+			for(var j = 0; j < autresRecettes.length; j++){
+				var hideClass = "hide";
+				if(autresRecettes[j].getAttribute('class') == "platRecette"){
+					autresRecettes[j].classList.add('hide');
+				}
+			}
+
 			// Trouve la recette associée
 			var carte = e.currentTarget;
 			while(carte.tagName != "OL"){
@@ -58,6 +77,5 @@ window.addEventListener('load', function(){
 			recettes.classList.add('hide');
 		});
 	}
-
 
 });

@@ -5,6 +5,7 @@
 \*********************************************************************/
 #ongletMenu
 {
+	position: relative;
 	height: auto;
 }
 #ongletMenu nav
@@ -16,47 +17,15 @@
 	align-items: center;
 	width: 100%;
 	background-color: #fff;
-	transform: perspective(300px);
 	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
 }
-/* Image d'arrière plan */
-/*
-#ongletMenu nav::after,
-#ongletMenu nav::before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-}
-#ongletMenu nav::after
-{
-	background-image: linear-gradient(30deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)); 
-}
-#ongletMenu nav::before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('../images/couvertures/menu.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
-	z-index: 1;
-}
-*/
 #ongletMenu nav h2
 {
 	color: #fff;
 	font-size: 40px;
 	margin-top: 75px;
 	color: #FB8C00;
+	text-align: center;
 	font-family: 'Anton', sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -148,10 +117,31 @@
 	opacity: 1;
 }
 
+@media screen and (max-width: 550px) {
+	
+	#ongletMenu nav
+	{
+		box-shadow: none;
+	}
+	#ongletMenu nav h2
+	{
+		font-size: 50px;
+		margin-top: 30px;
+		padding: 0 15px;
+	}
+	#ongletMenu nav > p
+	{
+		max-width: 92%;
+		margin-top: 25px;
+	}
+}
+
+
 
 /* Liste des plats */
 #ongletMenu > ul
 {
+	position: relative;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -159,17 +149,19 @@
 	width: 1120px; /* Modifié lors du responsive */
 	margin: 60px auto;
 }
+
+
 .plat
 {
 	position: relative;
-	width: 340px;
-	height: 400px;
+	width: 320px;
+	height: 410px;
 	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 50px;
 	margin-right: 50px;
 	list-style-type: none;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
 }
 .plat:nth-child(3n)
 {
@@ -406,18 +398,36 @@
 	background-color: rgba(244, 81, 30, .1);
 }
 
-/*
-.platRecette > ol li::before
-{
-	content: '';
-	position: absolute;
-	top: 13px;
-	left: 20px;
-	display: block;
-	width: 30px;
-	height: 30px;
-	background-image: url('../images/icones/arrow.svg');
-
-	background-size: 12px;
-	background-repeat: no-repeat;
-}*/
+@media screen and (max-width: 415px) {
+	#ongletMenu > ul {
+		width: 100%;
+		margin-top: 5px;
+		justify-content: center;
+	}
+	.plat
+	{
+		margin-right: 0;
+		margin-bottom: 0;
+		margin-top: 10px;
+		width: 100%;
+		height: 390px;
+		border-radius: 0;
+		box-shadow: none;
+		padding-top: 25px;
+		border-bottom: 1px solid rgba(0, 0, 0, .2);
+	}
+	.plat:first-child
+	{
+		display: none;
+	}
+	.showRecipe::before,
+	.showRecipe::after
+	{
+		display: none;
+	}
+	.showRecipe::before
+	{
+		display: block;
+		border: none;
+	}
+}
