@@ -7,6 +7,7 @@
 
 \*********************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 *
@@ -18,7 +19,7 @@
 }
 ::selection
 {
-	background: #FB8C00;
+	background: #E65100;
 	color: #fff;
 }
 
@@ -34,8 +35,8 @@ header
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-between;
-	height: 70px;
-	background-color: #FB8C00;
+	height: 75px;
+	background-color: #E65100;
 }
 header img
 {
@@ -59,15 +60,12 @@ header ul > li
 	align-items: center;
 
 	height: 100%;
-	padding: 0 17px;
-	font-weight: medium;
-	margin-right: 5px;
+	padding: 0 18px;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Roboto Condensed', sans-serif;
 	color: #fff;
 	transition: all .2s linear 0s;
-}
-header ul > li:last-child
-{
-	margin-right: 0;
 }
 /* Animation liée à l'élement situé après cette propriété */
 @keyframes unfold {
@@ -131,7 +129,7 @@ footer
 	align-items: center;
 	justify-content: space-between;
 	height: 180px;
-	background-color: #FB8C00;
+	background-color: #E65100;
 }
 footer::before
 {
@@ -141,7 +139,7 @@ footer::before
 	left: 20%;
 	height: 2px;
 	width: 60%;
-	background-color: #FB8C00;
+	background-color: #E65100;
 }
 footer ul
 {

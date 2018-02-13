@@ -41,6 +41,9 @@ window.addEventListener('load', function(){
 				toutLiens[i].classList.remove('highlight');
 			}
 			target.classList.add('highlight');
+
+			// Retour en haut de page
+			window.scrollTo(0, 0);
 		}
 	});
 
@@ -78,4 +81,38 @@ window.addEventListener('load', function(){
 		});
 	}
 
+
+	// Partie pour commander le plat
+	var popsup = document.querySelectorAll('.popsup');
+	var popup = document.getElementById('popup');
+	for(var i = 0; i < popsup.length; i++){
+		popsup[i].addEventListener('click', function(){
+			if(popup){
+				// On récupère la carte contenant les informations 
+				var currentCard = this.parentNode.parentNode;
+				var img = currentCard.querySelectorAll('.platPresentation img')[1].getAttribute('src');
+				var titre = currentCard.querySelector('.platPresentation h3').innerHTML;
+				var prix = currentCard.querySelector('.platActions p').innerHTML;
+				popup.querySelector('img').setAttribute('src', img);
+
+				popup.querySelector('h3').innerHTML = titre;
+				popup.querySelector('.hidden').value = titre;
+				popup.querySelector('p').innerHTML = prix;
+				console.log(popup.querySelector('.hidden'));
+				popup.classList.remove('hide');
+			}
+		});
+	}
+
+	// Fermeture du popup
+	popup.addEventListener('click', function(e){
+		var target = e.target;
+		while(target.tagName != "FORM" && (target != e.currentTarget)){
+			target = target.parentNode;
+		}
+		if(target == e.currentTarget)
+		{
+			this.classList.add('hide');
+		}
+	});
 });

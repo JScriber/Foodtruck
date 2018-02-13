@@ -42,6 +42,23 @@
 			</article>
 			<!-- Bloc dédié à la page du menu -->
 			<article id="ongletMenu">
+				<!-- Popup de confirmation de la commande -->
+				<div id="popup" class="hide">
+					<form method="post" action="coupon.php">
+						<span>
+							<h3>Titre</h3>
+							<p>Prix</p>
+							<img src="" name="Image du plat"/>
+						</span>
+						<input type="text" name="plat" class="hidden" />
+						<h3>Nom</h3>
+						<input type="text" placeholder="Doe" name="nom"/>
+						<h3>Prénom</h3>
+						<input type="text" placeholder="John" name="prenom"/>
+						<button>Commander</button>
+					</form>
+				</div>
+
 				<nav>
 					<h2>Choisissez, commandez, savourez</h2>
 					<p>Vous ne savez pas par où commencer ?<br> Faites tout
@@ -66,7 +83,7 @@
 							<button class="showRecipe topButton">
 								<img src="images/icones/recette.svg"/>
 							</button>
-							<img src="images/plats/sandwitch.jpg" name="Image de plat"/>
+							<img src="images/plats/bolognaise.jpg" name="Image de plat"/>
 							<h3>Sandwitch maison</h3>
 							<p>Lorem ipsum tempor officia consectetur minim officia nulla minim dolore in labore ullamco ut consequat eu cillum reprehenderit laborum eiusmod sint occaecat sit velit est officia pariatur esse.</p>
 						</li>
@@ -89,7 +106,7 @@
 						</li>
 						<div class="platActions">
 							<p>2.5</p>
-							<button>Commander</button>
+							<button class="popsup">Commander</button>
 						</div>
 					</ol>
 				</ul>

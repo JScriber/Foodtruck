@@ -24,7 +24,7 @@
 	color: #fff;
 	font-size: 40px;
 	margin-top: 75px;
-	color: #FB8C00;
+	color: #E65100;
 	text-align: center;
 	font-family: 'Anton', sans-serif;
 	font-weight: normal;
@@ -39,7 +39,7 @@
 	margin-top: 15px;
 	text-align: center;
 	font-weight: normal;
-	color: #FB8C00;
+	color: #E65100;
 	z-index: 100;
 }
 #ongletMenu nav ul
@@ -67,7 +67,7 @@
 	align-items: center;
 	height: 80px;
 	width: 130px;
-	color: #FB8C00;
+	color: #E65100;
 	font-family: 'Anton', sans-serif;
 	font-weight: bold;
 	font-size: 14px;
@@ -75,7 +75,7 @@
 }
 #ongletMenu nav li svg
 {
-	fill: #FB8C00;
+	fill: #E65100;
 	height: 25px;
 	margin-bottom: 10px;
 }
@@ -93,7 +93,7 @@
 	width: 70px;
 	height: 70px;
 	transform: scale(1.25);
-	background-color: #FB8C00;
+	background-color: #E65100;
 	opacity: .9;
 	border-radius: 50%;
 	z-index: -1;
@@ -144,7 +144,7 @@
 	position: relative;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
+	justify-content: space-around;
 	list-style-type: none;
 	width: 1120px; /* Modifié lors du responsive */
 	margin: 60px auto;
@@ -223,7 +223,7 @@
 	align-items: center;
 	margin-left: 20px;
 	font-size: 15px;
-	color: #FB8C00;
+	color: #E65100;
 	font-weight: bold;
 	margin-right: 5px;
 }
@@ -244,7 +244,7 @@
 	margin-right: 8px;
 	background: transparent;
 	text-transform: uppercase;
-	color: #FB8C00;
+	color: #E65100;
 }
 
 .platActions button::before,
@@ -258,7 +258,7 @@
 	height: 100%;
 	border-radius: 9px;
 	opacity: .1;
-	background-color: #FB8C00;
+	background-color: #E65100;
 	transform-origin: 50% 0;
 	transform: scaleX(0);
 	transition: all .1s linear 0s;
@@ -305,7 +305,7 @@
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-color: transparent #FB8C00 transparent transparent;
+	border-color: transparent #E65100 transparent transparent;
 	opacity: .4;
 	z-index: 1;
 }
@@ -363,7 +363,7 @@
 	border-bottom: 2px solid rgba(244, 81, 30, .4);
 	font-size: 20px;
 	font-weight: normal;
-	background-color: #FB8C00;
+	background-color: #E65100;
 }
 .platRecette h3 p
 {
@@ -430,4 +430,157 @@
 		display: block;
 		border: none;
 	}
+}
+
+/*******************************************************************\
+
+	Popup de confirmation de commande 
+
+\*******************************************************************/
+@keyframes fallDown
+{
+	from
+	{
+		transform: translateY(-100%);
+	}
+	to
+	{
+		transform: translateY(0);
+	}
+}
+#popup.hide
+{
+	display: none;
+}
+#popup 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
+	animation: fallDown .35s ease-out forwards;
+}
+
+#popup form
+{
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 20px;
+	background-color: #fff;
+	width: 380px;
+	height: 450px;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+}
+#popup form > span
+{
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 180px;
+	width: 100%;
+	/* Empêche l'image de dépasser 
+		les images n'étant pas nécessairement taillées
+	*/
+	overflow: hidden;
+}
+#popup form > span::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #E65100;
+	opacity: .46;
+	z-index: 30;
+}
+#popup form > span h3
+{
+	font-size: 32px;
+	color: #fff;
+	font-family: 'Anton', sans-serif;
+	font-weight: normal;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+	z-index: 200;
+}
+#popup form > span p
+{
+	color: #fff;
+	font-size: 19px;
+	font-family: 'Anton', sans-serif;
+	margin-top: 20px;
+	z-index: 200;
+}
+#popup form > span p::after
+{
+	content: '€';
+	margin-left: 5px;
+}
+#popup form > span img
+{
+	position: absolute;
+	top: -20px;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+}
+#popup form > h3
+{
+	color: #E65100;
+	margin-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+#popup form > input
+{
+	width: 80%;
+	padding: 4px 5px;
+	outline: none;
+	margin: 15px auto 5px;
+	border: none;
+	font-size: 15px;
+	color: #000;
+	border-bottom: 2px solid #E65100;
+}
+#popup form > input:focus
+{
+	color: #E65100;
+}
+#popup button
+{
+	display: flex;
+	height: auto;
+	width: auto;
+	padding: 10px;
+	margin: 19px 0;
+	margin-right: 20px;
+	color: #fff;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+	align-self: flex-end;
+	font-size: 15px;
+	text-transform: uppercase;
+	background-color: #E65100;
+}
+#popup button:active
+{
+	transform: scale(.96);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+/* Cache les champs selectionnés en JS */
+#popup .hidden
+{
+	display: none;
 }
