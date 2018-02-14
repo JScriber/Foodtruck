@@ -4,25 +4,7 @@
 	Celui-ci contient tous les élements principaux structurant
 	la page.
 
-
 \*********************************************************************/
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-*
-{
-	
-	margin:0;
-	padding:0;
-	font-family: 'Roboto', sans-serif;
-}
-::selection
-{
-	background: #E65100;
-	color: #fff;
-}
-
 header, section, footer
 {
 	width: 100%;
