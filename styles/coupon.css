@@ -1,0 +1,178 @@
+#conteneur
+{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+@keyframes fadein {
+	from
+	{
+		transform: scale(0);
+		opacity: .2;
+	}
+	to
+	{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+#done
+{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	animation: fadein .4s linear forwards;
+}
+#done svg
+{
+	height: 30px;
+	fill: #808080;
+	margin-bottom: 20px;
+}
+#done p
+{
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	color: #808080;
+}
+
+
+#coupon
+{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	display: block;
+	width: 425px;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+header
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+}
+header span
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: 90px;
+	border-radius: 5px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+header span img
+{
+	height: 100%;
+}
+header ul
+{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	height: 100%;
+	list-style-type: none;
+	margin-left: 20px;
+}
+header ul li
+{
+	font-size: 17px;
+	color: #E65100;
+}
+header ul li:first-child
+{
+	margin-bottom: 10px;
+	font-size: 28px;
+	font-weight: bold;
+}
+ol
+{
+	display: flex;
+	list-style-type: none;
+	width: 100%;
+}
+ol li
+{
+	display: flex;
+	flex-flow: column;
+	color: #fff;
+	flex-grow: 1;
+}
+ol li h2
+{
+	margin: 15px 0;
+	margin-left: 25px;
+	font-weight: normal;
+	color: #808080;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+ol li p
+{
+	font-size: 28px;
+	font-weight: bold;
+	margin-left: 45px;
+	color: #E65100;
+}
+
+#print
+{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: auto;
+	height: 35px;
+	border-radius: 4px;
+	margin-top: 40px;
+	background-color: #E65100;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+#print:active
+{
+	transform: scale(.98);
+}
+#print svg
+{
+	height: 20px;
+	fill: #fff;
+	margin: 0 10px;
+}
+#print p
+{
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-right: 10px;
+}
+@media print {
+	#done, #print
+	{
+		display: none;
+	}
+	#coupon
+	{
+		transform: scale(1.3);
+		box-shadow: none;
+		margin-top: 80px;
+	}
+}

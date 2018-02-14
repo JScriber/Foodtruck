@@ -3,10 +3,58 @@
 	<head>
 		<!-- CSS files -->
 		<link rel="stylesheet" href="styles/commun.css" type="text/css"/>
+		<link rel="stylesheet" href="styles/coupon.css" type="text/css"/>
+		
+		<!-- JS files -->
+		<script type="text/javascript" src="scripts/coupon.js"></script>
 		<title>Coupon commande</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
-		Test
+		<svg version="1.0" style="display: none;">
+			<defs>
+				<g id="IMG_DONE">
+					<path d="M0 0h24v24H0z" fill="none"/>
+					<path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+				</g>
+				<g id="IMG_PRINT">
+					<path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
+					<path d="M0 0h24v24H0z" fill="none"/>
+				</g>
+			</defs>
+		</svg>
+		<div id="conteneur">
+			<div id="done">
+				<svg viewBox="0 0 24 24">
+		   			<use xlink:href="#IMG_DONE"></use>
+		  		</svg>
+		  		<p>Plat réservé</p>
+			</div>
+			<div id="coupon">
+				<header>
+					<span><img src="images/plats/bolognaise.jpg"/></span>
+					<ul>
+						<li>NOM prénom</li>
+						<li>Nom du plat</li>
+					</ul>
+				</header>
+				<ol>
+					<li>
+						<h2>Numéro</h2>
+						<p>123</p>	
+					</li>
+					<li>
+						<h2>Date récupération</h2>
+						<p>20/12/18</p>
+					</li>
+				</ol>
+			</div>
+			<div id="print">
+				<svg viewBox="0 0 24 24">
+		   			<use xlink:href="#IMG_PRINT"></use>
+		  		</svg>
+		  		<p>Imprimer</p>
+			</div>
+		</div>
 	</body>
 </html>
