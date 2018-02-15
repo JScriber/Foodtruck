@@ -44,6 +44,9 @@ header ul
 }
 header ul > li
 {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	cursor: pointer;
 	position: relative;
 	display: flex;
@@ -164,7 +167,7 @@ footer ul li svg
 }
 footer ul:last-child li
 {
-	padding: 5px 0;
+	padding: 6px 0;
 }
 footer ul li, footer a
 {

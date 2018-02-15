@@ -99,6 +99,15 @@
 
 
 /* Liste des plats */
+@keyframes getUp {
+	from
+	{
+		transform: translateY(250px);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
 #ongletMenu > ul
 {
 	position: relative;
@@ -109,12 +118,14 @@
 	width: 1120px; /* Modifié lors du responsive */
 	margin: 0 auto;
 	margin-bottom: 60px;
+	animation: getUp .24s ease-out forwards;
 }
 
 
 .plat
 {
 	position: relative;
+	display: block;
 	width: 320px;
 	height: 345px;
 	overflow: hidden;
@@ -126,6 +137,11 @@
 .plat:nth-child(3n)
 {
 	margin-right: 0;
+}
+
+.plat.hidden
+{
+	display: none;
 }
 
 .plat > li

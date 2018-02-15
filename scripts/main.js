@@ -115,4 +115,42 @@ window.addEventListener('load', function(){
 			this.classList.add('hide');
 		}
 	});
+
+	// Changement de régime (filtre)
+	var regimes = document.querySelector('.regime');
+	if(regimes){
+		regimes.addEventListener('click', function(e){
+			var target = e.target,
+			highLight = 'highlight';
+
+			// test si est un li
+			var isLi = function(targ){
+				return target.tagName == "LI";
+			}
+
+			while(!isLi(target) && target != e.currentTarget){
+				target = target.parentNode;
+			}
+			if(isLi(target)){
+				var oldHighLight = e.currentTarget.querySelector('.'+highLight);
+				oldHighLight.classList.remove(highLight);
+				target.classList.add(highLight);
+
+				var sift = target.getAttribute('data-search');
+				var plats = document.querySelectorAll('.plat'), i;
+				if(sift == "all"){
+					for(i = 0; i < plats.length; i++){
+						// Retire les filtres
+						plats[i].classList.remove('hidden');
+					}
+				}else{
+					for(i = 0; i < plats.length; i++){
+						if(!plats[i].classList.contains(sift)){
+							plats[i].classList.add('hidden');
+						}
+					}
+				}
+			}
+		});
+	}
 });
