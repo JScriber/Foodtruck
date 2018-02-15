@@ -513,7 +513,7 @@
 	bottom: -4px;
 	left: 0;
 	height: 2px;
-	width: 40%;
+	width: 30%;
 	background-color: #FFB300;
 	z-index: 8850;
 }
@@ -562,13 +562,13 @@
 	border: none;
 	font-size: 14px;
 	font-weight: medium;
-	color: #FFB300;
+	color: #fff;
 	text-transform: uppercase;
 	background: transparent;
 }
 #popup form > input::placeholder
 {
-	color: #FFB300;
+	color: #fff;
 }
 #popup button
 {
