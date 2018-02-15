@@ -9,6 +9,11 @@
 		<link rel="stylesheet" href="styles/noustrouver.css" type="text/css"/>
 
 		<link rel="shortcut icon" href="images/logo/favicon.png">
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+
 		<meta charset="utf-8"/>
 		<title>Comme à la maison</title>
 	</head>
@@ -47,7 +52,49 @@
 		<section>
 			<!-- Bloc dédié à la page d'accueil -->
 			<article class="shown" id="ongletAccueil">
-				Page accueil
+				<div class="caroussel">
+			        <span><img src="images/accueil/caroussel1.jpg"/></span>
+			        <span><img src="images/accueil/caroussel2.jpg"/></span>
+			        <span><img src="images/accueil/caroussel3.jpg"/></span>
+			    </div>
+			    <script type="text/javascript">
+			        $('.caroussel').slick({
+			            slidesToShow: 1,
+			            slidesToScroll: 1,
+			            autoplay: true,
+			            autoplaySpeed: 2000,
+			            infinite: true,
+			            speed: 500,
+			            fade: true,
+			            prevArrow: false,
+						nextArrow: false,
+			            cssEase: 'linear'
+			        });
+			    </script>
+
+			    <article>
+			        <h1>Ce que nous proposons</h1>
+			        <ul>
+			            <li>
+			                <img src="images/accueil/gaufres.jpg" alt="gaufres" />
+			                <h3> Simple </h3>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            </li>
+
+			            <li>
+			                <img src="images/accueil/porc_c.jpg" alt="porc au caramel" />
+			                <h3> Comme à la maison </h3>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            </li>
+
+			            <li>
+			                <img src="D:\Cours\Web\webworld\images\shibuya_day.jpg" alt="shibuya le jour" />
+
+			                <h3> A la bonne franquette </h3>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            </li>
+			        </ul>
+			    </article>
 			</article>
 			<!-- Bloc dédié à la page du menu -->
 			<article id="ongletMenu">

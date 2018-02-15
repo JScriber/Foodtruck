@@ -3,3 +3,97 @@
 	Fichier propre à la partie Accueil.
 
 \*********************************************************************/
+/* Caroussel */
+.caroussel{
+	position: relative;
+	display: block;
+    width: 100%;
+    height: 600px;
+    outline: none;
+    overflow: hidden;
+}
+.caroussel span
+{
+	float: left;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.caroussel span:focus
+{
+	outline: none;
+}
+.caroussel span img
+{
+	width: 100%;
+}
+
+/* Corps de page */
+#ongletAccueil article
+{
+    width: 100%;
+    display: block;
+    margin-top: 80px; 
+}
+
+#ongletAccueil h1
+{
+    text-align: center;
+    font-size: xx-large;
+    padding-bottom: 50px;
+}
+
+/* le conteneur des 3 cartes */
+#ongletAccueil ul
+{ 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    list-style-type: none;
+    margin: 0 auto 50px;
+}
+
+/* les cartes */
+#ongletAccueil li
+{ 
+    position: relative;
+    width: 350px;
+    height: auto;
+	background-color: #3e3e3e;
+    margin-bottom: 50px;
+}
+
+/* les images de la partie centrale */
+#ongletAccueil li img 
+{
+    display: block;
+    width: 100%;
+    height: 200px; 
+}
+
+/* les titres des images */
+#ongletAccueil h3 
+{ 
+    display: block;
+    text-align: center;
+    padding-top: 31.95px;
+    padding-bottom: 21.30px;
+    padding-left: 21.30px;
+    padding-right: 21.30px;
+}
+
+ /* les "légendes" des images de la partie centrale */
+#ongletAccueil h3+p
+{
+    width: 100%;
+    height: auto ;
+    text-align: justify;
+    padding-bottom: 31.95px;
+    padding-left: 21.30px;
+    padding-right: 21.30px;
+}

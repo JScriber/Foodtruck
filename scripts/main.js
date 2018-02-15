@@ -7,7 +7,17 @@ window.addEventListener('load', function(){
 		plat.parentNode.appendChild(copie);
 	}
 
-
+	// Ajustement du carrousel
+	var changeSize = function(){
+		var caroussel = document.querySelector('.caroussel');
+		var header = document.querySelector('header');
+		if(carrousel && header){
+			var headerHeight = header.getBoundingClientRect().height;
+			carrousel = window.innerHeight - headerHeight;
+		}
+	}
+	changeSize();
+	window.addEventListener('resize', changeSize);
 
 	// Changement d'article (de morceau de page)
 	var liens = document.querySelector('header ul');
