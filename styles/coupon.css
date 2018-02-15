@@ -19,7 +19,8 @@
 		opacity: 1;
 	}
 }
-#done
+/* Element informatif */
+.information
 {
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -30,13 +31,13 @@
 	margin-bottom: 50px;
 	animation: fadein .4s linear forwards;
 }
-#done svg
+.information svg
 {
 	height: 30px;
 	fill: #808080;
 	margin-bottom: 20px;
 }
-#done p
+.information p
 {
 	font-size: 13px;
 	text-transform: uppercase;
@@ -45,6 +46,8 @@
 }
 
 
+
+/* Coupon */
 #coupon
 {
 	-webkit-user-select: none;
@@ -55,8 +58,7 @@
 	height: auto;
 	padding-top: 15px;
 	padding-bottom: 30px;
-	border-radius: 5px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+	border: 2px dotted #3e3e3e;
 }
 header
 {
@@ -65,22 +67,6 @@ header
 	align-items: center;
 	width: 100%;
 	height: 100px;
-}
-header span
-{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 90px;
-	height: 90px;
-	border-radius: 5px;
-	margin-left: 20px;
-	overflow: hidden;
-}
-header span img
-{
-	height: 100%;
 }
 header ul
 {
@@ -94,14 +80,27 @@ header ul
 header ul li
 {
 	font-size: 17px;
-	color: #E65100;
+	color: #3e3e3e;
 }
 header ul li:first-child
 {
-	margin-bottom: 10px;
-	font-size: 28px;
+	position: relative;
+	margin-bottom: 15px;
+	font-size: 25px;
+	text-transform: uppercase;
 	font-weight: bold;
 }
+header ul li:first-child::before
+{
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 60%;
+	height: 2px;
+	background-color: #FFB300;
+}
+
 ol
 {
 	display: flex;
@@ -129,43 +128,33 @@ ol li p
 	font-size: 28px;
 	font-weight: bold;
 	margin-left: 45px;
-	color: #E65100;
+	color: #3e3e3e;
 }
 
+/* Bouton d'impression */
 #print
 {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	cursor: pointer;
-	display: flex;
-	align-items: center;
-	width: auto;
-	height: 35px;
-	border-radius: 4px;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	color: #808080;
+	padding: 10px 5px;
 	margin-top: 40px;
-	background-color: #E65100;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+#print:hover
+{
+	color: #FFB300;
 }
 #print:active
 {
 	transform: scale(.98);
 }
-#print svg
-{
-	height: 20px;
-	fill: #fff;
-	margin: 0 10px;
-}
-#print p
-{
-	color: #fff;
-	font-size: 14px;
-	text-transform: uppercase;
-	padding-right: 10px;
-}
+
+
 @media print {
-	#done, #print
+	
+	.information, #print
 	{
 		display: none;
 	}

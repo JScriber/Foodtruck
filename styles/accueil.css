@@ -11,7 +11,6 @@
     width: 100%;
     height: 600px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
-    margin-bottom: 30px;
     z-index: 20;
 }
 .carrouselConteneur h1
@@ -69,9 +68,27 @@
 
 #ongletAccueil article h1
 {
-    text-align: center;
-    font-size: xx-large;
-    padding-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+}
+#ongletAccueil article h1::before
+{
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 40%;
+	background-color: #FFB300;
+	z-index: 8850;
 }
 
 /* le conteneur des 3 cartes */
@@ -82,45 +99,88 @@
     justify-content: space-around;
     width: 90%;
     list-style-type: none;
-    margin: 0 auto 50px;
+    margin: 50px auto 50px;
 }
 
 /* les cartes */
 #ongletAccueil li
 { 
     position: relative;
-    width: 350px;
+    width: 320px;
     height: auto;
 	background-color: #3e3e3e;
     margin-bottom: 50px;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+}
+
+/* Partie image et titre. */
+#ongletAccueil li span
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 120px;
+}
+#ongletAccueil li span::after
+{
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 30%;
+	width: 40%;
+	height: 2px;
+	background-color: #FFB300;
+	z-index: 2000000;
 }
 
 /* les images de la partie centrale */
-#ongletAccueil li img 
+#ongletAccueil li span img 
 {
+	position: absolute;
+	top: 0;
+	left: 0;
     display: block;
     width: 100%;
-    height: 200px; 
+	z-index: 16;
 }
 
 /* les titres des images */
-#ongletAccueil h3 
+#ongletAccueil span h3 
 { 
-    display: block;
-    text-align: center;
-    padding-top: 31.95px;
-    padding-bottom: 21.30px;
-    padding-left: 21.30px;
-    padding-right: 21.30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: normal;
+    z-index: 20;
+}
+
+/* Calque grisé */
+#ongletAccueil span h3::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3e3e3e;
+	opacity: .65;
+	z-index: -1;
 }
 
  /* les "légendes" des images de la partie centrale */
-#ongletAccueil h3+p
+#ongletAccueil  li p
 {
-    width: 100%;
-    height: auto ;
-    text-align: justify;
-    padding-bottom: 31.95px;
-    padding-left: 21.30px;
-    padding-right: 21.30px;
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    font-size: 14px;
+    font-weight: normal;
+	color: #fff;
+	opacity: .9;
 }

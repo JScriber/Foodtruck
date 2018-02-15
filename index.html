@@ -13,6 +13,7 @@
 
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAekiCXUGLMd4eHEK2nxmI6mqPovkEmhIw"></script>
 
 		<meta charset="utf-8"/>
 		<title>Comme à la maison</title>
@@ -65,7 +66,7 @@
 			            slidesToShow: 1,
 			            slidesToScroll: 1,
 			            autoplay: true,
-			            autoplaySpeed: 3000,
+			            autoplaySpeed: 5000,
 			            infinite: true,
 			            speed: 500,
 			            fade: true,
@@ -79,22 +80,25 @@
 			        <h1>Ce que nous proposons</h1>
 			        <ul>
 			            <li>
-			                <img src="images/accueil/gaufres.jpg" alt="gaufres" />
-			                <h3> Simple </h3>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            	<span>
+			            		<img src="images/accueil/simple.jpg" alt="Gaufres"/>
+			               		<h3>Simple</h3>
+			            	</span>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis.</p>
 			            </li>
-
 			            <li>
-			                <img src="images/accueil/porc_c.jpg" alt="porc au caramel" />
-			                <h3> Comme à la maison </h3>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            	<span>
+			               		<img src="images/accueil/comme_a_la_maison.jpg" alt="Chips"/>
+			                	<h3>Comme à la maison</h3>
+			                </span>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis.</p>
 			            </li>
-
 			            <li>
-			                <img src="D:\Cours\Web\webworld\images\shibuya_day.jpg" alt="shibuya le jour" />
-
-			                <h3> A la bonne franquette </h3>
-			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. Pellentesque massa neque, eleifend at ultrices in, aliquet dictum nibh. </p>
+			            	<span>
+			                	<img src="images/accueil/bonne_franquette.jpg" alt="Viande"/>
+			               		<h3>A la bonne franquette</h3>
+			               	</span>
+			                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae convallis lacus. Fusce pellentesque iaculis luctus. Integer tincidunt purus vitae elementum tempor. Vivamus ultricies nunc hendrerit odio consectetur, lobortis ornare nunc convallis. </p>
 			            </li>
 			        </ul>
 			    </article>
@@ -198,7 +202,26 @@
 			</article>
 			<!-- Bloc dédié à trouver l'équipe -->
 			<article id="ongletNousTrouver">
-				Page nous trouver
+				<div class="content">
+			        <ul id="joursSemaine">
+			            <li class="highlight">Lundi</li>
+			            <li>Mardi</li>
+			            <li>Mercredi</li>
+			            <li>Jeudi</li>
+			            <li>Vendredi</li>
+			            <li>Samedi</li>
+			        </ul>
+			        <div class="allMap">
+			           <div class="slider">
+			            <div data-latitude="48.046807" data-longitude="-1.740896" class="map"></div>
+			            <div data-latitude="48.085075" data-longitude="-1.691362" class="map"></div>
+			            <div data-latitude="48.121466" data-longitude="-1.704052" class="map"></div>
+			            <div data-latitude="48.115891" data-longitude="-1.637143" class="map"></div>
+			            <div data-latitude="48.125957" data-longitude="-1.623550" class="map"></div>
+			            <div data-latitude="48.125924" data-longitude="-1.650284" class="map"></div>
+			            </div>
+			        </div>
+			    </div>
 			</article>
 		</section>
 		<footer>
@@ -229,5 +252,6 @@
 
 	<!-- JS files -->
 	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/noustrouver.js"></script>
 
 </html>
