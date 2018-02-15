@@ -5,6 +5,11 @@
 	la page.
 
 \*********************************************************************/
+body
+{
+	/* Fond blanc demandé par le client */
+	background-color: #fff;
+}
 header, section, footer
 {
 	width: 100%;
@@ -13,17 +18,20 @@ header, section, footer
 /* Style de l'entête de la page */
 header
 {
+	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-between;
 	height: 75px;
-	background-color: #E65100;
+	background-color: #3e3e3e;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+	z-index: 50;
 }
 header img
 {
-	height: 56px;
-	margin-left: 28px;
+	height: 58px;
+	margin-left: 30px;
 	transition: all .2s linear 0s;
 }
 header ul
@@ -31,7 +39,7 @@ header ul
 	display: flex;
 	flex-flow: row nowrap; 
 	list-style-type: none;
-	padding-right: 28px;
+	padding-right: 30px;
 	height: 100%;
 }
 header ul > li
@@ -43,11 +51,15 @@ header ul > li
 
 	height: 100%;
 	padding: 0 18px;
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: bold;
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #fff;
+	text-transform: uppercase;
+	color: #606060;
 	transition: all .2s linear 0s;
+}
+header ul > li p
+{
+	z-index: 500;
 }
 /* Animation liée à l'élement situé après cette propriété */
 @keyframes unfold {
@@ -61,6 +73,10 @@ header ul > li
 	}
 }
 /* Represente la page où l'on est actuellement */
+header ul > li.highlight
+{
+	color: #ffb300;
+}
 header ul > li.highlight::before
 {
 	content: '';
@@ -68,9 +84,10 @@ header ul > li.highlight::before
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 3px;
+	height: 2px;
 	transform-origin: 50% 0;
-	background-color: #fff;
+	background-color: #ffb300;
+	z-index: 20;
 	animation: unfold .2s linear forwards 0s;
 }
 header ul > li:hover
@@ -85,21 +102,23 @@ header ul > li.highlight:hover
 section
 {
 	height: auto;
-	background-color: red;
 }
 section > article
 {
 	display: none;
-	width: 100%;
-
-	/* Temporaire */
-	height: 800px;
-	background-color: #fff;
+	flex-flow: column wrap;
+	flex-grow: 1;
+	width: auto;
+	/*
+	border-left: 2px solid #E65100;
+	border-right: 2px solid #E65100;
+	*/
+	background-color: #313131;
 }
 /* Classe permettant l'apparition des blocs */
 section > article.shown
 {
-	display: block;
+	display: flex;
 }
 
 
@@ -107,39 +126,41 @@ section > article.shown
 footer 
 {
 	position: relative;
+	background-color: #3e3e3e;
+}
+footer ol
+{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 180px;
-	background-color: #E65100;
+	height: 190px;
 }
-footer::before
-{
-	content: '';
-	position: absolute;
-	top: -4px;
-	left: 20%;
-	height: 2px;
-	width: 60%;
-	background-color: #E65100;
-}
+footer ol,
 footer ul
 {
 	list-style-type: none;
 }
 footer ul:first-child
 {
-	margin-left: 28px;
+	margin-left: 35px;
 }
 footer ul:last-child
 {
-	margin-right: 28px;
+	margin-right: 35px;
 }
 
 
 footer ul li
 {
-	padding: 10px 0;
+	display: flex;
+	padding: 15px 0;
+}
+
+footer ul li svg
+{
+	fill: #FFB300;
+	height: 18px;
+	margin-right: 15px;
 }
 footer ul:last-child li
 {
@@ -151,11 +172,44 @@ footer ul li, footer a
 	font-size: 15px;
 	font-weight: normal;
 	text-decoration: none;
+	transition: color .15s linear 0s;
+}
+footer a:hover
+{
+	color: #FFB300;
 }
 footer ul li img
 {
-	height: 70px;
+	height: 75px;
 }
+footer p
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 45px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #606060;
+}
+footer p a
+{
+	text-decoration: none;
+	margin-left: 5px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	opacity: .8;
+	transition: color .15s linear 0s;
+}
+footer p a:hover
+{
+	opacity: 1;
+	color: #FFB300;
+}
+
 
 
 @media screen and (max-width: 550px) {
@@ -192,7 +246,7 @@ footer ul li img
 	}
 
 
-	footer
+	footer ol
 	{
 		flex-flow: column wrap;
 		height: auto;

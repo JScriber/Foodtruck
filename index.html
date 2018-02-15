@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="styles/menu.css" type="text/css"/>
 		<link rel="stylesheet" href="styles/noustrouver.css" type="text/css"/>
 
-		<!--<link rel="shortcut icon" href="images/.ico">-->
+		<link rel="shortcut icon" href="images/logo/favicon.png">
 		<meta charset="utf-8"/>
 		<title>Comme à la maison</title>
 	</head>
@@ -25,11 +25,19 @@
 					<path d="M0.417,135.908c11.1,59.7,55.3,219.2,217.5,286.7h194.3c-61.4-111.9-172.4-166.9-222-197.3c37.8,6.9,154.7,47,261.3,158.1    c8.2,8.6,24.9,26.7,25.4,26.5c-12.101-175-174.3-316.9-345.801-316.9c-34.899,0-72.199,4.5-112,14.1    C6.216,110.208-1.984,122.908,0.417,135.908z" />
 					<path d="M937.816,477.608c0-13.801-11.199-25-25-25h-770.7c-13.8,0-25,11.199-25,25v3c0,201.199,163.101,364.199,364.2,364.199    h92.2c201.2,0,364.2-163.1,364.2-364.199v-3H937.816z"/>
 				</g>
+				<g id="IMG_MAIL">
+					<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+					<path d="M0 0h24v24H0z" fill="none"/>
+				</g>
+				<g id="IMG_PHONE">
+					<path d="M0 0h24v24H0z" fill="none"/>
+					<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+				</g>
 			</defs>
 		</svg>
 
 		<header>
-			<img src="images/logo/logo.png" name="Logo de l'entreprise"/>
+			<img src="images/logo/logo.svg" name="Logo de l'entreprise"/>
 			<ul>
 				<li class="highlight" data-link="ongletAccueil">Accueil</li>
 				<li data-link="ongletMenu">Menu</li>
@@ -53,17 +61,14 @@
 						</span>
 						<input type="text" name="plat" class="hidden" />
 						<h3>Nom</h3>
-						<input type="text" placeholder="Doe" name="nom"/>
+						<input  autocomplete="off" type="text" placeholder="Durand" name="nom"/>
 						<h3>Prénom</h3>
-						<input type="text" placeholder="John" name="prenom"/>
+						<input autocomplete="off" type="text" placeholder="Jean" name="prenom"/>
 						<button>Commander</button>
 					</form>
 				</div>
 
 				<nav>
-					<h2>Choisissez, commandez, savourez</h2>
-					<p>Vous ne savez pas par où commencer ?<br> Faites tout
-					d’abord votre choix dans la liste ci-dessous !</p>
 					<ul>
 						<li class="highlight">
 							<svg viewBox="0 0 380.721 380.721">
@@ -81,21 +86,20 @@
 				<ul>
 					<ol class="plat">
 						<li class="platPresentation">
-							<button class="showRecipe topButton">
-								<img src="images/icones/recette.svg"/>
-							</button>
-							<img src="images/plats/bolognaise.jpg" name="Image de plat"/>
-							<h3>Sandwitch maison</h3>
-							<p>Lorem ipsum tempor officia consectetur minim officia nulla minim dolore in labore ullamco ut consequat eu cillum reprehenderit laborum eiusmod sint occaecat sit velit est officia pariatur esse.</p>
+							<div class="header">
+								<button class="showRecipe topButton">
+									<img src="images/icones/recette.svg"/>
+								</button>
+								<img src="images/plats/sandwitch.jpg" name="Image de plat"/>
+								<h3>Sandwitch maison</h3>
+							</div>
+							<p>Lorem ipsum tempor officia consectetur minim officia nulla minim dolore in labore ullamco ut consequat eu cillum.</p>
 						</li>
 						<li class="platRecette hide">
 							<button class="closeRecipe topButton">
 								<img src="images/icones/close.svg"/>
 							</button>
-							<h3>
-								<p>Ingrédients</p>
-								<p>Sandwitch maison</p>
-							</h3>
+							<h3>Composition</h3>
 							<ol>
 								<li>Pain</li>
 								<li>Beurre</li>
@@ -118,16 +122,28 @@
 			</article>
 		</section>
 		<footer>
-			<ul>
-				<li><a href="" target="_blank">Droits d'auteur</a></li>
-				<li><a href="" target="_blank">Mentions légales</a></li>
-				<li><a href="" target="_blank">Conditions d'utilisation</a></li>
-			</ul>
-			<ul>
-				<li><img src="images/logo/logo.png" name="Logo de l'entreprise"/></li>
-				<li>02 25 25 25 25<li>
-				<li>commealamaison@gmail.com</li>
-			</ul>
+			<ol>
+				<ul>
+					<li><a href="" target="_blank">Droits d'auteur</a></li>
+					<li><a href="" target="_blank">Mentions légales</a></li>
+					<li><a href="" target="_blank">Conditions d'utilisation</a></li>
+				</ul>
+				<ul>
+					<li><img src="images/logo/logo.svg" name="Logo de l'entreprise"/></li>
+					<li>
+						<svg viewBox="0 0 24 24">
+		   					<use xlink:href="#IMG_PHONE"></use>
+		  				</svg>
+		  				02 25 25 25 25<li>
+					<li>
+						<svg viewBox="0 0 24 24">
+		   					<use xlink:href="#IMG_MAIL"></use>
+		  				</svg>
+		  				commealamaison@gmail.com
+		  			</li>
+				</ul>
+			</ol>
+			<p>Développé par <a target="_blank" href="anteo.html">Antéo</a>.</p>
 		</footer>
 	</body>
 

@@ -16,31 +16,6 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	background-color: #fff;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-}
-#ongletMenu nav h2
-{
-	color: #fff;
-	font-size: 40px;
-	margin-top: 75px;
-	color: #E65100;
-	text-align: center;
-	font-family: 'Anton', sans-serif;
-	font-weight: normal;
-	text-transform: uppercase;
-	z-index: 100;
-}
-#ongletMenu nav > p
-{
-	color: #fff;
-	font-size: 16px;
-	max-width: 40%;
-	margin-top: 15px;
-	text-align: center;
-	font-weight: normal;
-	color: #E65100;
-	z-index: 100;
 }
 #ongletMenu nav ul
 {
@@ -48,8 +23,8 @@
 	display: flex;
 	flex-flow: row nowrap;
 	height: auto;
-	margin-top: 75px;
-	margin-bottom: 75px;
+	margin-top: 50px;
+	margin-bottom: 55px;
 	padding: 0 10px;
 	background: transparent;
 	z-index: 100;
@@ -66,16 +41,15 @@
 	flex-flow: column nowrap;
 	align-items: center;
 	height: 80px;
-	width: 130px;
-	color: #E65100;
-	font-family: 'Anton', sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	transition: background-color .15s linear 0s;
+	width: 120px;
+	color: #656565;
+	font-weight: normal;
+	font-size: 13px;
+	text-transform: uppercase;
 }
 #ongletMenu nav li svg
 {
-	fill: #E65100;
+	fill: #656565;
 	height: 25px;
 	margin-bottom: 10px;
 }
@@ -83,20 +57,6 @@
 #ongletMenu nav li.highlight
 {
 	color: #fff;
-}
-#ongletMenu nav li.highlight::before
-{
-	content: '';
-	position: absolute;
-	top: 9px;
-	left: 30px;
-	width: 70px;
-	height: 70px;
-	transform: scale(1.25);
-	background-color: #E65100;
-	opacity: .9;
-	border-radius: 50%;
-	z-index: -1;
 }
 #ongletMenu nav li.highlight svg
 {
@@ -147,7 +107,8 @@
 	justify-content: space-around;
 	list-style-type: none;
 	width: 1120px; /* Modifié lors du responsive */
-	margin: 60px auto;
+	margin: 0 auto;
+	margin-bottom: 60px;
 }
 
 
@@ -155,8 +116,7 @@
 {
 	position: relative;
 	width: 320px;
-	height: 410px;
-	border-radius: 5px;
+	height: 345px;
 	overflow: hidden;
 	margin-bottom: 50px;
 	margin-right: 50px;
@@ -175,34 +135,76 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: #3e3e3e;
 	z-index: 500;
 }
 
 /* Image de 340*200 */
-.plat > li > img
+.plat .header
 {
-	display: block;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
 	width: 100%;
 	height: 200px;
+}
+
+.plat .header::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3e3e3e;
+	opacity: .7;
+	z-index: 8600;
+}
+.plat > li .header > img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 }
-.plat h3
+.plat .header h3
 {
-	padding: 17px 0;
-	padding-left: 20px;
-	padding-bottom: 15px;
-	color: #000;
+	position: relative;
+	margin-bottom: 19px;
+	margin-left: 24px;
+	color: #fff;
 	font-weight: normal;
+	text-transform: uppercase;
 	font-size: 23px;
+	z-index: 8800;
 }
+.plat h3::before
+{
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 40%;
+	background-color: #FFB300;
+	z-index: 8850;
+}
+
 .plat > li > p
 {
-	font-size: 14px;
+	display: block;
+	font-size: 15px;
 	padding: 0 28px;
+	margin-top: 23px;
 	width: auto;
+	color: #fff;
 	opacity: .8;
 }
+
 .plat .platActions
 {
 	position: absolute;
@@ -213,7 +215,7 @@
 	justify-content: space-between;
 	width: 100%;
 	height: 48px;
-	background-color: #fff;
+	background-color: #3e3e3e;
 	z-index: 500;
 }
 .platActions p
@@ -223,8 +225,8 @@
 	align-items: center;
 	margin-left: 20px;
 	font-size: 15px;
-	color: #E65100;
-	font-weight: bold;
+	color: #fff;
+	font-weight: normal;
 	margin-right: 5px;
 }
 .platActions p::after
@@ -239,44 +241,21 @@
 	border: none;
 	outline: none;
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: normal;
 	padding: 10px 9px;
 	margin-right: 8px;
 	background: transparent;
 	text-transform: uppercase;
-	color: #E65100;
+	color: #fff;
+	transition: color .15s linear 0s;
 }
-
-.platActions button::before,
-.platActions button::after
+.plat button:hover
 {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 9px;
-	opacity: .1;
-	background-color: #E65100;
-	transform-origin: 50% 0;
-	transform: scaleX(0);
-	transition: all .1s linear 0s;
+	color: #FFB300;
 }
-.platActions button::after
+.platActions button:active
 {
-	transition: all .25s linear 0s;
-}
-.platActions button:hover::before,
-.platActions button:hover::after
-{
-	transform: scaleX(1);
-	border-radius: 4px;
-}
-.platActions button:active::before,
-.platActions button:active::after
-{
-	opacity: .15;
+	opacity: .7;
 }
 
 /* Boutons d'action permettant de naviguer entre les élements de la carte */
@@ -288,40 +267,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 58px;
-	height: 65px;
+	width: 70px;
+	height: 70px;
 	background: transparent;
 	border: none;
 	outline: none;
-	z-index: 1;
-}
-.showRecipe::before,
-.showRecipe::after
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-color: transparent #E65100 transparent transparent;
-	opacity: .4;
-	z-index: 1;
-}
-.showRecipe::before
-{
-	border-width: 0 100px 100px 0;
-	opacity: .7;
-}
-.showRecipe::after
-{
-	border-width: 0 110px 110px 0;
+	z-index: 1000000;
 }
 .topButton img
 {
-	height: 22px;
+	opacity: .4;
+	height: 20px;
 	z-index: 20;
+}
+.topButton:hover img
+{
+	opacity: 1;
 }
 .topButton:active img
 {
@@ -352,18 +313,21 @@
 
 .platRecette h3
 {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: flex-start;
-	justify-content: center;
-	height: 60px;
-	width: 100%;
-	padding-left: 20px;
+	position: relative;
+	display: inline-block;
+	margin-top: 32px;
+	margin-bottom: 20px;
+	margin-left: 25px;
+	padding-bottom: 4px;
+	width: auto;
 	color: #fff;
-	border-bottom: 2px solid rgba(244, 81, 30, .4);
-	font-size: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
 	font-weight: normal;
-	background-color: #E65100;
+}
+.platRecette h3::before
+{
+	width: 60%;
 }
 .platRecette h3 p
 {
@@ -381,21 +345,26 @@
 	display: flex;
 	flex-flow: column wrap;
 	width: 100%;
-	flex-grow: 1;
-	height: auto;
+	height: 215px;
 	list-style-type: none;
 }
 .platRecette > ol li
 {
 	position: relative;
-	color: #000;
-	font-size: 15px;
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	opacity: .95;
 	padding: 10px 0;
-	padding-left: 30px;
+	padding-left: 35px;
 }
-.platRecette > ol li:nth-child(even)
+.closeRecipe
 {
-	background-color: rgba(244, 81, 30, .1);
+	height: 78px;
+}
+.closeRecipe img
+{
+	height: 15px;
 }
 
 @media screen and (max-width: 415px) {
@@ -467,24 +436,47 @@
 
 #popup form
 {
+	position: relative;
 	display: flex;
 	flex-flow: column wrap;
-	margin-top: 20px;
-	background-color: #fff;
-	width: 380px;
-	height: 450px;
-	border-radius: 4px;
-	overflow: hidden;
+	margin-top: 16px;
+	background-color: #3e3e3e;
+	width: 370px;
+	height: 380px;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
 }
+
+#popup form::before,
+#popup form::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3e3e3e;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+	z-index: -2;
+}
+#popup form::before
+{
+	top: -12px;
+	transform: scale(.97);
+	z-index: -1;
+}
+#popup form::after
+{
+	top: -20px;
+	transform: scale(.95);
+}
+
 #popup form > span
 {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: center;
-	justify-content: center;
-	height: 180px;
+	height: 150px;
 	width: 100%;
 	/* Empêche l'image de dépasser 
 		les images n'étant pas nécessairement taillées
@@ -499,25 +491,41 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #E65100;
-	opacity: .46;
+	background-color: #3e3e3e;
+	opacity: .7;
 	z-index: 30;
 }
 #popup form > span h3
 {
-	font-size: 32px;
+	position: relative;
+	font-size: 26px;
 	color: #fff;
-	font-family: 'Anton', sans-serif;
+	margin-top: 25px;
+	margin-left: 24px;
+	text-transform: uppercase;
 	font-weight: normal;
-	text-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 	z-index: 200;
 }
+#popup form > span h3::before
+{
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 2px;
+	width: 40%;
+	background-color: #FFB300;
+	z-index: 8850;
+}
+
 #popup form > span p
 {
 	color: #fff;
-	font-size: 19px;
-	font-family: 'Anton', sans-serif;
-	margin-top: 20px;
+	margin-left: 26px;
+	font-size: 16px;
+	font-weight: normal;
+	opacity: .6;
+	margin-top: 25px;
 	z-index: 200;
 }
 #popup form > span p::after
@@ -535,26 +543,32 @@
 }
 #popup form > h3
 {
-	color: #E65100;
-	margin-left: 20px;
+	position: relative;
+	margin-left: 25px;
 	padding-top: 20px;
-	padding-bottom: 10px;
-	font-size: 15px;
+	padding-bottom: 3px;
+	font-size: 14px;
+	color: #606060;
+	text-transform: uppercase;
+	font-weight: medium;
 }
+
 #popup form > input
 {
-	width: 80%;
-	padding: 4px 5px;
+	width: 86%;
+	padding: 4px 10px;
 	outline: none;
 	margin: 15px auto 5px;
 	border: none;
-	font-size: 15px;
-	color: #000;
-	border-bottom: 2px solid #E65100;
+	font-size: 14px;
+	font-weight: medium;
+	color: #FFB300;
+	text-transform: uppercase;
+	background: transparent;
 }
-#popup form > input:focus
+#popup form > input::placeholder
 {
-	color: #E65100;
+	color: #FFB300;
 }
 #popup button
 {
@@ -562,7 +576,7 @@
 	height: auto;
 	width: auto;
 	padding: 10px;
-	margin: 19px 0;
+	margin: 10px 0;
 	margin-right: 20px;
 	color: #fff;
 	border-radius: 4px;
@@ -570,13 +584,12 @@
 	border: none;
 	align-self: flex-end;
 	font-size: 15px;
+	background: transparent;
 	text-transform: uppercase;
-	background-color: #E65100;
 }
 #popup button:active
 {
-	transform: scale(.96);
-	box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+	color: #FFB300;
 }
 
 /* Cache les champs selectionnés en JS */

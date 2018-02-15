@@ -4,7 +4,7 @@
 
 \*********************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 *
@@ -12,10 +12,10 @@
 	
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 ::selection
 {
-	background: #E65100;
+	background: #ffb300;
 	color: #fff;
 }
