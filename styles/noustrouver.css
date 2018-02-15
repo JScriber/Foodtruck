@@ -21,6 +21,7 @@
 
 #ongletNousTrouver ul {
     display: flex;
+    flex-flow: row nowrap;
     width: 100%;
     height: 50px;
 }
@@ -88,4 +89,31 @@
     width: 600px;
     height: 100%;
     background-color: #000;
+}
+
+@media screen and (max-width: 600px){
+    #ongletNousTrouver .content
+    {
+        width: 100%;
+        margin-top: 5px;
+    }
+    #ongletNousTrouver .map
+    {
+        width: 415px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #ongletNousTrouver ul 
+    {
+        height: auto;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    #ongletNousTrouver ul li
+    {
+        padding: 20px 0;
+        width: 50%;
+    }
+
 }

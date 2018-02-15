@@ -204,18 +204,22 @@ google.maps.event.addDomListener(window, 'load', function(){
 
 
 window.addEventListener('load', function () {
-    document.getElementById("joursSemaine").addEventListener("click", function (e) {
+    var moveCard = function (indice) {
+        var slider = document.querySelector('.slider');
+        if(slider){
+            var largeurCarte = document.querySelector('.map').getBoundingClientRect().width;
+            var positionnement = parseInt(-1 * largeurCarte * indice);
+            var propriete = 'translateX('+positionnement+'px)';
+            slider.style.transform = propriete;
+        }
+    }
+
+    var joursSemaine = document.getElementById("joursSemaine");
+    joursSemaine.addEventListener("click", function (e) {
         var target = e.target,
             classHighLight = "highlight";
 
-        var moveCard = function (indice) {
-            var slider = document.querySelector('.slider');
-            if(slider){
-                var positionnement = parseInt(-1 * 600 * indice);
-                var propriete = 'translateX('+positionnement+'px)';
-                slider.style.transform = propriete;
-            }
-        }
+        
 
         if (target.tagName == "LI") {
             var oldDay = e.currentTarget.querySelector('.' + classHighLight);
@@ -227,6 +231,17 @@ window.addEventListener('load', function () {
                 if (days[i] == target) {
                     moveCard(i);
                 }
+            }
+        }
+    });
+    // Passage du mobile à l'ordinateur
+    // Sans ce script, la carte affichée est mauvaise
+    window.addEventListener('resize', function(){
+        var jours = joursSemaine.querySelectorAll('li');
+        for(var i = 0; i < jours.length; i++){
+            if(jours[i].classList.contains('highlight')){
+                // Retrouve l'indice et l'applique
+                moveCard(i);
             }
         }
     });

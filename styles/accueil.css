@@ -25,6 +25,7 @@
 	height: 100%;
 	color: #FFB300;
 	font-weight: bold;
+	text-align: center;
 	font-size: 35px;
 	text-shadow: 0 2px 6px rgba(0, 0, 0, .3);
 	text-transform: uppercase;
@@ -183,4 +184,51 @@
     font-weight: normal;
 	color: #fff;
 	opacity: .9;
+}
+
+
+@media screen and (max-width: 415px) {
+	/* Cache le carrousel */
+	.caroussel
+	{
+		display: none;
+	}
+	.carrouselConteneur h1
+	{
+		font-size: 38px;
+	}
+	#ongletAccueil ul
+	{
+		width: 100%;
+	}
+	#ongletAccueil ul li
+	{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#ongletAccueil li span
+	{
+		overflow: hidden;
+	}
+	#ongletAccueil li span::before
+	{
+		bottom: 0;
+	}
+	#ongletAccueil article h1
+	{
+		width: 100%;
+		text-align: center;
+		margin: 40px auto 0;
+	}
+	#ongletAccueil article h1::before
+	{
+		width: 40%;
+		left: 30%;
+	}
+	#ongletAccueil  li p
+	{
+		margin: 30px auto;
+		text-align: justify;
+		font-size: 16px;
+	}
 }

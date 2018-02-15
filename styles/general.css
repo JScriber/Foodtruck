@@ -222,7 +222,7 @@ footer p a:hover
 	}
 	header img
 	{
-		height: 80px;
+		height: 85px;
 		margin: 28px 0;
 	}
 	header ul
@@ -242,10 +242,6 @@ footer p a:hover
 	header ul li:active
 	{
 		background-color: rgba(255, 255, 255, .1);
-	}
-	header ul > li.highlight::before
-	{
-		height: 4px;
 	}
 
 
