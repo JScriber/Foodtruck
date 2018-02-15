@@ -9,12 +9,13 @@ window.addEventListener('load', function(){
 
 	// Ajustement du carrousel
 	var changeSize = function(){
-		var caroussel = document.querySelector('.caroussel');
-		var header = document.querySelector('header');
-		if(carrousel && header){
-			var headerHeight = header.getBoundingClientRect().height;
-			carrousel = window.innerHeight - headerHeight;
-		}
+		var carousselConteneur = document.querySelector('.carrouselConteneur'),
+		header = document.querySelector('header');
+
+		var headerHeight = header.getBoundingClientRect().height;
+		var newHeight = window.innerHeight - headerHeight+"px";
+
+		carousselConteneur.style.height = newHeight;
 	}
 	changeSize();
 	window.addEventListener('resize', changeSize);
