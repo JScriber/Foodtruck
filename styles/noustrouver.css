@@ -211,6 +211,10 @@
     text-transform: uppercase;
     font-weight: normal;
 }
+#eventPopup ul a:active
+{
+    color: #FFB300;
+}
 
 /****************************************************\
     Responsive
