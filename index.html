@@ -39,6 +39,10 @@
 					<path d="M0 0h24v24H0z" fill="none"/>
 					<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
 				</g>
+				<g id="IMG_EVENT">
+					<path d="M0 0h24v24H0z" fill="none"/>
+					<path d="M17 10H7v2h10v-2zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5-5H7v2h7v-2z"/>
+				</g>
 			</defs>
 		</svg>
 
@@ -126,8 +130,8 @@
 					<ul class="regime">
 						<li data-search="all" class="highlight">
 							<svg viewBox="0 0 380.721 380.721">
-		   						<use xlink:href="#IMG_TRAY"></use>
-		  					</svg>
+								<use xlink:href="#IMG_TRAY"></use>
+							</svg>
 							<p>Totalité</p>
 						<li data-search="vegetarien">
 							<svg viewBox="0 0 937.816 937.815">
@@ -202,6 +206,18 @@
 			</article>
 			<!-- Bloc dédié à trouver l'équipe -->
 			<article id="ongletNousTrouver">
+				<div id="eventPopup" class="hidden">
+					<div>
+						<h1>Présence aux évènements</h1>
+			   			<ul>
+			       			<a href="">évènement</a>
+							<a href="">évènement</a>
+			       			<a href="">évènement</a>
+							<a href="">évènement</a>
+							<a href="">évènement</a>
+			            </ul>
+			        </div>
+			    </div>
 				<div class="content">
 			        <ul id="joursSemaine">
 			            <li class="highlight">Lundi</li>
@@ -213,13 +229,18 @@
 			        </ul>
 			        <div class="allMap">
 			           <div class="slider">
-			            <div data-latitude="48.046807" data-longitude="-1.740896" class="map"></div>
-			            <div data-latitude="48.085075" data-longitude="-1.691362" class="map"></div>
-			            <div data-latitude="48.121466" data-longitude="-1.704052" class="map"></div>
-			            <div data-latitude="48.115891" data-longitude="-1.637143" class="map"></div>
-			            <div data-latitude="48.125957" data-longitude="-1.623550" class="map"></div>
-			            <div data-latitude="48.125924" data-longitude="-1.650284" class="map"></div>
+			        		<div data-latitude="48.046807" data-longitude="-1.740896" class="map"></div>
+			        		<div data-latitude="48.085075" data-longitude="-1.691362" class="map"></div>
+			        		<div data-latitude="48.121466" data-longitude="-1.704052" class="map"></div>
+			        		<div data-latitude="48.115891" data-longitude="-1.637143" class="map"></div>
+			        		<div data-latitude="48.125957" data-longitude="-1.623550" class="map"></div>
+			        		<div data-latitude="48.125924" data-longitude="-1.650284" class="map"></div>
 			            </div>
+			        </div>
+			        <div id="showEvents">
+						<svg viewBox="0 0 24 24">
+							<use xlink:href="#IMG_EVENT"></use>
+						</svg>
 			        </div>
 			    </div>
 			</article>

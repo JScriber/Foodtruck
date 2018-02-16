@@ -115,17 +115,29 @@ window.addEventListener('load', function(){
 		});
 	}
 
-	// Fermeture du popup
-	popup.addEventListener('click', function(e){
-		var target = e.target;
-		while(target.tagName != "FORM" && (target != e.currentTarget)){
-			target = target.parentNode;
-		}
-		if(target == e.currentTarget)
-		{
-			this.classList.add('hide');
-		}
+	// Fermeture d'un popup
+	var closePopup = function(dom, cardTag, hideClass){
+		dom.addEventListener('click', function(e){
+			var target = e.target;
+			while(target.tagName != cardTag && (target != e.currentTarget)){
+				target = target.parentNode;
+			}
+			if(target == e.currentTarget)
+			{
+				this.classList.add(hideClass);
+			}
+		});
+	}
+	closePopup(popup, 'FORM', 'hide');
+
+	// Fermeture du popup "evenement"
+	var eventPopup = document.getElementById('eventPopup');
+	closePopup(eventPopup, 'DIV', 'hidden');
+	// Ouverture du popup "evenement"
+	document.getElementById('showEvents').addEventListener('click', function(){
+		eventPopup.classList.remove('hidden');
 	});
+	
 
 	// Changement de régime (filtre)
 	var regimes = document.querySelector('.regime');
