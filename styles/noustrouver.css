@@ -232,16 +232,20 @@
 }
 
 @media screen and (max-width: 415px) {
-    #ongletNousTrouver ul 
+    #ongletNousTrouver .content ul
     {
         height: auto;
         width: 100%;
         flex-flow: row wrap;
     }
-    #ongletNousTrouver ul li
+    #ongletNousTrouver .content ul li
     {
         padding: 20px 0;
         width: 50%;
+    }
+    #showEvents
+    {
+        right: 38%;
     }
 
 }
