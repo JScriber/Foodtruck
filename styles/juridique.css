@@ -61,3 +61,24 @@ article p
 	text-align: justify;
 	line-height: 25px;
 }
+
+
+@media screen and (max-width: 600px) {
+	header p
+	{
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	article
+	{
+		width: 100%;
+	}
+	article p
+	{
+		padding: 0 10px;
+	}
+}
