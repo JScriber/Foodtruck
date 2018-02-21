@@ -14,6 +14,9 @@
 	</head>
 	<body>
 		<?php
+			// Connexion à la BDD
+			include('includes/connexionBDD.php');
+
 			$plat = $_POST['plat'];
 			$nom = $_POST['nom'];
 			$prenom = $_POST['prenom'];
