@@ -87,7 +87,6 @@ header ul li:first-child
 	position: relative;
 	margin-bottom: 15px;
 	font-size: 25px;
-	text-transform: uppercase;
 	font-weight: bold;
 }
 header ul li:first-child::before

@@ -11,6 +11,23 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<?php
+			$plat = $_POST['plat'];
+			$nom = $_POST['nom'];
+			$prenom = $_POST['prenom'];
+
+
+			if(isset($plat) && isset($nom) && isset($prenom)){
+				$plat = htmlspecialchars($plat);
+				$nom = htmlspecialchars($nom);
+				$prenom = htmlspecialchars($prenom);
+			}else{
+				header('Location:index.php');
+			}
+
+			// Permet d'avoir avec certitude le jour d'après.
+			$demain = new DateTime('now+1day');
+		?>
 		<svg version="1.0" style="display: none;">
 			<defs>
 				<g id="IMG_DONE">
@@ -29,8 +46,8 @@
 			<div id="coupon">
 				<header>
 					<ul>
-						<li>NOM prénom</li>
-						<li>Nom du plat</li>
+						<li><?php echo strtoupper($nom)." ".ucfirst(strtolower($prenom)) ?></li>
+						<li><?php echo $plat ?></li>
 					</ul>
 				</header>
 				<ol>
@@ -40,7 +57,7 @@
 					</li>
 					<li>
 						<h2>Date récupération</h2>
-						<p>20/12/18</p>
+						<p><?php echo $demain->format('d/m/Y'); ?></p>
 					</li>
 				</ol>
 			</div>
