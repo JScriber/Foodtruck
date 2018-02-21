@@ -5,6 +5,8 @@
 		<link rel="stylesheet" href="styles/commun.css" type="text/css"/>
 		<link rel="stylesheet" href="styles/coupon.css" type="text/css"/>
 		
+		<link rel="shortcut icon" href="images/logo/favicon.png">
+		
 		<!-- JS files -->
 		<script type="text/javascript" src="scripts/coupon.js"></script>
 		<title>Coupon commande</title>

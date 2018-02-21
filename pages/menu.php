@@ -39,7 +39,7 @@
 						<img src="images/icones/recette.svg"/>
 					</button>
 					<img src="images/plats/sandwitch.jpg" name="Image de plat"/>
-					<h3>Sandwitch maison</h3>
+					<h3>Sandwich maison</h3>
 				</div>
 				<p>Lorem ipsum tempor officia consectetur minim officia nulla minim dolore in labore ullamco ut consequat eu cillum.</p>
 			</li>
@@ -70,7 +70,7 @@
 						<img src="images/icones/recette.svg"/>
 					</button>
 					<img src="images/plats/bolognaise.jpg" name="Image de plat"/>
-					<h3>Bolognaises vegans</h3>
+					<h3>Bolognaises veganes</h3>
 				</div>
 				<p>Lorem ipsum tempor officia consectetur minim officia nulla minim dolore in labore ullamco ut consequat eu cillum.</p>
 			</li>
