@@ -15,7 +15,8 @@ CREATE TABLE plat(
         id_plat     int (11) Auto_increment  NOT NULL ,
         nom         Varchar (25) NOT NULL ,
         photo       Varchar (25) ,
-        description Varchar (200) NOT NULL ,
+        description Varchar (200) NOT NULL,
+        vegetarien Bool NOT NULL ,
         id_prix     Int ,
         PRIMARY KEY (id_plat )
 )ENGINE=InnoDB;
