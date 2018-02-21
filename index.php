@@ -20,7 +20,8 @@
 	</head>
 
 	<body>
-		<?php include('includes/vectors.php'); ?>
+		<?php include('includes/connexionBDD.php'); ?>
+		<?php include('includes/vecteurs.php'); ?>
 		<header>
 			<img src="images/logo/logo.svg" name="Logo de l'entreprise"/>
 			<ul>
