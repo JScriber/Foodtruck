@@ -21,13 +21,19 @@
 			$nom = $_POST['nom'];
 			$prenom = $_POST['prenom'];
 
+			$redirection = 'Location:index.php';
+
 
 			if(isset($plat) && isset($nom) && isset($prenom)){
 				$plat = htmlspecialchars($plat);
 				$nom = htmlspecialchars($nom);
 				$prenom = htmlspecialchars($prenom);
+				// Le nom et le prénom doivent être supérieurs à deux
+				if(strlen($nom) < 2 || strlen($prenom) < 2){
+					header($redirection);
+				}
 			}else{
-				header('Location:index.php');
+				header($redirection);
 			}
 
 			// Permet d'avoir avec certitude le jour d'après.

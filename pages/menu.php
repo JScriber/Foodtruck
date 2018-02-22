@@ -9,9 +9,9 @@
 			</span>
 			<input type="text" name="plat" class="hidden" />
 			<h3>Nom</h3>
-			<input  autocomplete="off" type="text" placeholder="Durand" name="nom"/>
+			<input  autocomplete="off" minlength="2" type="text" placeholder="Durand" name="nom"/>
 			<h3>Prénom</h3>
-			<input autocomplete="off" type="text" placeholder="Jean" name="prenom"/>
+			<input autocomplete="off" minlength="2" type="text" placeholder="Jean" name="prenom"/>
 			<button>Commander</button>
 		</form>
 	</div>
