@@ -1,11 +1,11 @@
 window.addEventListener('load', function(){
 	// A supprimer plus tard
-	var plat = document.querySelector('.plat'),
+	/*var plat = document.querySelector('.plat'),
 	copie;
 	for(var i = 0; i < 10; i++) {
 		copie = plat.cloneNode(true);
 		plat.parentNode.appendChild(copie);
-	}
+	}*/
 
 	// Ajustement du carrousel
 	var changeSize = function(){
