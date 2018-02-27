@@ -68,6 +68,20 @@ CREATE TABLE possede(
         PRIMARY KEY (id_plat ,id_ingredient )
 )ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: evenement
+#------------------------------------------------------------
+
+CREATE TABLE evenement(
+        id_evenement     Int NOT NULL ,
+        nom              Varchar (25) NOT NULL ,
+        lien             Varchar (100) NOT NULL ,
+        PRIMARY KEY (id_evenement )
+)ENGINE=InnoDB;
+
+
+
 ALTER TABLE plat ADD CONSTRAINT FK_plat_id_prix FOREIGN KEY (id_prix) REFERENCES prix(id_prix);
 ALTER TABLE commande ADD CONSTRAINT FK_commande_id_plat FOREIGN KEY (id_plat) REFERENCES plat(id_plat);
 ALTER TABLE possede ADD CONSTRAINT FK_possede_id_plat FOREIGN KEY (id_plat) REFERENCES plat(id_plat);
