@@ -3,11 +3,12 @@
 		<div>
 			<h1>Présence aux évènements</h1>
    			<ul>
-       			<a href="">évènement</a>
-				<a href="">évènement</a>
-       			<a href="">évènement</a>
-				<a href="">évènement</a>
-				<a href="">évènement</a>
+            <?php 
+                $evenements = $bdd->query('SELECT * FROM evenement ORDER BY nom');
+                while($evenement = $evenements->fetch()){
+            ?>
+       			<a href=" <?php echo $evenement['lien']; ?> "> <?php echo $evenement['nom']; ?> </a>
+            <?php } ?>
             </ul>
         </div>
     </div>
