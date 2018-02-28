@@ -14,7 +14,7 @@ use calm;
 CREATE TABLE plat(
         id_plat     int (11) Auto_increment  NOT NULL ,
         nom         Varchar (25) NOT NULL ,
-        photo       Varchar (25) ,
+        photo       Varchar (100) ,
         description Varchar (200) NOT NULL,
         vegetarien Bool NOT NULL ,
         id_prix     Int ,
@@ -74,7 +74,7 @@ CREATE TABLE possede(
 #------------------------------------------------------------
 
 CREATE TABLE evenement(
-        id_evenement     Int NOT NULL ,
+        id_evenement     int (11) Auto_increment  NOT NULL ,
         nom              Varchar (25) NOT NULL ,
         lien             Varchar (100) NOT NULL ,
         PRIMARY KEY (id_evenement )
