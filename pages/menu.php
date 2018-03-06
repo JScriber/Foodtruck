@@ -29,6 +29,12 @@
 					</svg>
 				<p>Végétarien</p>
 			</li>
+			<li data-search="vegan">
+				<svg viewBox="0 0 525.153 525.153">
+						<use xlink:href="#IMG_VEGAN"></use>
+					</svg>
+				<p>Vegan</p>
+			</li>
 			<li data-search="halal">
 				<svg viewBox="0 0 329.039 329.039">
 						<use xlink:href="#IMG_HALAL"></use>
