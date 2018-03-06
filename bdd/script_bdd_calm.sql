@@ -17,6 +17,8 @@ CREATE TABLE plat(
         photo       Varchar (100) ,
         description Varchar (200) NOT NULL,
         vegetarien Bool NOT NULL ,
+        vegan Bool NOT NULL ,
+        halal Bool NOT NULL ,
         id_prix     Int ,
         PRIMARY KEY (id_plat )
 )ENGINE=InnoDB;
