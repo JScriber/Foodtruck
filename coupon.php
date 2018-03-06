@@ -23,7 +23,6 @@
 
 			$redirection = 'Location:index.php';
 
-
 			if(isset($plat) && isset($nom) && isset($prenom)){
 				$plat = htmlspecialchars($plat);
 				$nom = htmlspecialchars($nom);
@@ -33,18 +32,27 @@
 					header($redirection);
 				}
 				// insertion dans la bdd
-				$test = $bdd -> query("SELECT MAX(id_commande) AS id_commande FROM commande");
-				$test = $test -> fetch();
+				$nbcommande = $bdd -> query("SELECT COUNT(id_commande) FROM commande");
+				$nbcommande = $nbcommande -> fetch();
 				$id_plat = $bdd -> query("SELECT id_plat FROM plat WHERE nom = '".$plat."'");
 				$id_plat = $id_plat -> fetch();
 
+				$id_plat_str = strval($id_plat[0]);
+
+				$derniere = $bdd -> query("SELECT * FROM commande ORDER BY id_commande DESC LIMIT 1");
+				$derniere = $derniere -> fetch();
+
+				if ($nom == $derniere['nom'] && $prenom == $derniere['prenom'] && $id_plat_str == $derniere['id_plat']){
+					header($redirection);
+				}
+				
 				do{
 					$numero = rand(1000, 2000);
 					$unique = $bdd -> query("SELECT numero FROM commande WHERE numero = '".$numero."' ");
 					$unique = $unique -> fetch();
 				} while ( $unique != NULL );
 				
-				if($test[0] <= 100 ){
+				if($nbcommande[0] <= 150 ){
 					$insertion = $bdd -> query("INSERT INTO commande VALUES (NULL, '".$nom."', '".$prenom."', '".$numero."', '".$id_plat[0]."')");
 				}else{
 					header($redirection);
