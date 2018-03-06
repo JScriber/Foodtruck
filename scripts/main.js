@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
+
 	// A supprimer plus tard
 	/*var plat = document.querySelector('.plat'),
 	copie;
@@ -109,7 +110,7 @@ window.addEventListener('load', function(){
 				popup.querySelector('h3').innerHTML = titre;
 				popup.querySelector('.hidden').value = titre;
 				popup.querySelector('p').innerHTML = prix;
-				console.log(popup.querySelector('.hidden'));
+				//console.log(popup.querySelector('.hidden'));
 				popup.classList.remove('hide');
 			}
 		});
@@ -135,6 +136,13 @@ window.addEventListener('load', function(){
 	closePopup(eventPopup, 'DIV', 'hidden');
 	// Ouverture du popup "evenement"
 	document.getElementById('showEvents').addEventListener('click', function(){
+		// Changement de taille pour les évenements
+    	var nombreEvenements = eventPopup.querySelectorAll('a').length;
+
+    	if(nombreEvenements > 7){
+    		eventPopup.querySelector('div').style.height = 400 + (nombreEvenements - 8)*40 + "px";
+    	}
+
 		eventPopup.classList.remove('hidden');
 	});
 	
@@ -176,4 +184,8 @@ window.addEventListener('load', function(){
 			}
 		});
 	}
+
+
+
+	
 });

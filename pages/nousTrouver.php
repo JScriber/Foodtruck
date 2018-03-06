@@ -7,7 +7,7 @@
                 $evenements = $bdd->query('SELECT * FROM evenement ORDER BY nom');
                 while($evenement = $evenements->fetch()){
             ?>
-       			<a href=" <?php echo $evenement['lien']; ?> "> <?php echo $evenement['nom']; ?> </a>
+       			<a href=" <?php echo $evenement['lien']; ?> " target="_blank"> <?php echo $evenement['nom']; ?> </a>
             <?php } ?>
             </ul>
         </div>
