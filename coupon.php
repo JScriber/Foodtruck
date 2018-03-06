@@ -32,6 +32,23 @@
 				if(strlen($nom) < 2 || strlen($prenom) < 2){
 					header($redirection);
 				}
+				// insertion dans la bdd
+				$test = $bdd -> query("SELECT MAX(id_commande) AS id_commande FROM commande");
+				$test = $test -> fetch();
+				$id_plat = $bdd -> query("SELECT id_plat FROM plat WHERE nom = '".$plat."'");
+				$id_plat = $id_plat -> fetch();
+
+				do{
+					$numero = rand(1000, 2000);
+					$unique = $bdd -> query("SELECT numero FROM commande WHERE numero = '".$numero."' ");
+					$unique = $unique -> fetch();
+				} while ( $unique != NULL );
+				
+				if($test[0] <= 100 ){
+					$insertion = $bdd -> query("INSERT INTO commande VALUES (NULL, '".$nom."', '".$prenom."', '".$numero."', '".$id_plat[0]."')");
+				}else{
+					header($redirection);
+				}
 			}else{
 				header($redirection);
 			}
@@ -64,7 +81,7 @@
 				<ol>
 					<li>
 						<h2>Numéro</h2>
-						<p>123</p>	
+						<p><?php echo $numero ?></p>
 					</li>
 					<li>
 						<h2>Date récupération</h2>

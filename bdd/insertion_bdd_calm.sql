@@ -5,7 +5,7 @@
 INSERT INTO prix VALUES (NULL, "2.50");
 
 
-INSERT INTO plat VALUES (NULL, "Sandwich maison", "..\images\plats\sandwich.jpg", "Le sandwich maison est un super bon sandwich que nous préparons avec amour chaque jour.", FALSE, 1);
+INSERT INTO plat VALUES (NULL, "Sandwich maison", "sandwich.jpg", "Le sandwich maison est un super bon sandwich que nous préparons avec amour chaque jour.", FALSE, 1);
 
 
 INSERT INTO ingredient VALUES (NULL, "pain"), (NULL, "beurre"),(NULL, "jambon"),(NULL, "salade");
