@@ -29,6 +29,12 @@
 					</svg>
 				<p>Végétarien</p>
 			</li>
+			<li data-search="halal">
+				<svg viewBox="0 0 329.039 329.039">
+						<use xlink:href="#IMG_HALAL"></use>
+					</svg>
+				<p>Halal</p>
+			</li>
 		</ul>
 	</nav>
 	<ul>
@@ -41,6 +47,12 @@
 				<ol class="plat <?php
 					if($plat['vegetarien']){
 						echo "vegetarien";
+					}
+					if($plat['halal']){
+						echo "halal";
+					}
+					if($plat['vegan']){
+						echo "vegan";
 					}
 				?>">
 					<li class="platPresentation">

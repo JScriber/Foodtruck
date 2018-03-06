@@ -161,12 +161,12 @@ window.addEventListener('load', function(){
 
 				var sift = target.getAttribute('data-search');
 				var plats = document.querySelectorAll('.plat'), i;
-				if(sift == "all"){
-					for(i = 0; i < plats.length; i++){
-						// Retire les filtres
-						plats[i].classList.remove('hidden');
-					}
-				}else{
+				
+				for(i = 0; i < plats.length; i++){
+					// Retire les filtres
+					plats[i].classList.remove('hidden');
+				}
+				if(sift != "all"){
 					for(i = 0; i < plats.length; i++){
 						if(!plats[i].classList.contains(sift)){
 							plats[i].classList.add('hidden');
