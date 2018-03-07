@@ -68,7 +68,7 @@
 #ongletNousTrouver .allMap {
     position: relative;
     display: block;
-    height: 400px;
+    height: 450px;
     width: 100%;
     overflow: hidden;
 }
@@ -81,13 +81,53 @@
     transform: translateX(0px);
 }
 
-#ongletNousTrouver .map {
+#ongletNousTrouver .slider ul {
+    position: relative;
 	cursor: default;
     float: left;
-    display: flex;
+    display: block;
     width: 600px;
     height: 100%;
     background-color: #000;
+}
+
+#ongletNousTrouver .slider ul li:first-child
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(32, 32, 32, .7);
+    width: auto;
+    padding: 16px 0;
+    color: #fff;
+    z-index: 10;
+}
+#ongletNousTrouver .slider li h2
+{
+    font-size: 17px;
+    color: #FFB300;
+    margin-left: 20px;
+    padding-right: 25px;
+    text-transform: uppercase;
+}
+#ongletNousTrouver .slider li p
+{
+    font-size: 13px;
+    margin-left: 20px;
+    opacity: .7;
+    padding-right: 25px;
+
+    margin-top: 7px;
+}
+#ongletNousTrouver .map
+{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 /****************************************************\
@@ -225,7 +265,7 @@
         width: 100%;
         margin-top: 5px;
     }
-    #ongletNousTrouver .map
+    #ongletNousTrouver .slider ul
     {
         width: 415px;
     }
