@@ -383,6 +383,33 @@
 }
 
 
+.introuvable
+{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	height: 310px;
+	margin-bottom: 20px;
+	color: #fff;
+	opacity: .75;
+}
+.introuvable svg
+{
+	height: 42px;
+	fill: #fff;
+}
+.introuvable p
+{
+	margin-top: 20px;
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.introuvable.shown
+{
+	display: flex;
+}
 /*******************************************************************\
 
 	Popup de confirmation de commande 

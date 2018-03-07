@@ -100,6 +100,11 @@
 		<?php
 			}
 		?>
-
+		<ol class="introuvable">
+			<svg viewBox="0 0 24 24">
+				<use xlink:href="#IMG_NONE"></use>
+			</svg>
+			<p>Aucun élément</p>
+		</ol>
 	</ul>
 </article>

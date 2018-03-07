@@ -169,16 +169,24 @@ window.addEventListener('load', function(){
 
 				var sift = target.getAttribute('data-search');
 				var plats = document.querySelectorAll('.plat'), i;
+				var introuvable = document.querySelector('.introuvable');
 				
+				introuvable.classList.remove('shown');
 				for(i = 0; i < plats.length; i++){
 					// Retire les filtres
 					plats[i].classList.remove('hidden');
 				}
 				if(sift != "all"){
+					var hiddenOnes = 0;
 					for(i = 0; i < plats.length; i++){
 						if(!plats[i].classList.contains(sift)){
 							plats[i].classList.add('hidden');
+							hiddenOnes++;
 						}
+					}
+					// Montre que rien n'a été trouvé
+					if(hiddenOnes == plats.length){
+						introuvable.classList.add('shown');
 					}
 				}
 			}
