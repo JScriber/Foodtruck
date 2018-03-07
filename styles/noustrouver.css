@@ -255,37 +255,3 @@
 {
     color: #FFB300;
 }
-
-/****************************************************\
-    Responsive
-\****************************************************/
-@media screen and (max-width: 600px){
-    #ongletNousTrouver .content
-    {
-        width: 100%;
-        margin-top: 5px;
-    }
-    #ongletNousTrouver .slider ul
-    {
-        width: 415px;
-    }
-}
-
-@media screen and (max-width: 415px) {
-    #ongletNousTrouver .content ul
-    {
-        height: auto;
-        width: 100%;
-        flex-flow: row wrap;
-    }
-    #ongletNousTrouver .content ul li
-    {
-        padding: 20px 0;
-        width: 50%;
-    }
-    #showEvents
-    {
-        right: 38%;
-    }
-
-}

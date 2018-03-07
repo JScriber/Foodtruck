@@ -10,6 +10,7 @@
 
 		<!-- Responsive CSS -->
 		<link rel="stylesheet" href="styles/responsive/menu.css" type="text/css"/>
+		<link rel="stylesheet" href="styles/responsive/noustrouver.css" type="text/css"/>
 
 		<link rel="shortcut icon" href="images/logo/favicon.png">
 
