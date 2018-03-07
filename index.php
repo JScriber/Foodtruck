@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="styles/noustrouver.css" type="text/css"/>
 
 		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="styles/responsive/headerFooter.css" media="screen and (max-device-width: 770px)" type="text/css"/>
+		<link rel="stylesheet" href="styles/responsive/headerFooter.css" media="screen and (max-width: 550px)" type="text/css"/>
 		<link rel="stylesheet" href="styles/responsive/menu.css" type="text/css"/>
 		<link rel="stylesheet" href="styles/responsive/noustrouver.css" type="text/css"/>
 

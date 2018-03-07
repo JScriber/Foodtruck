@@ -4,9 +4,24 @@
         width: 100%;
         margin-top: 5px;
     }
-    #ongletNousTrouver .slider ul
+    #ongletNousTrouver .slider ul,
+    #ongletNousTrouver .slider li
     {
-        width: 415px;
+        position: relative;
+        width: 520px;
+    }
+
+
+    #ongletNousTrouver .slider ul li:first-child
+    {
+        align-items: center;
+        width: 100%;
+    }
+    #ongletNousTrouver .slider li h2,
+    #ongletNousTrouver .slider li p
+    {
+        margin-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -27,4 +42,15 @@
         right: 38%;
     }
 
+    #ongletNousTrouver .slider ul
+    {
+        width: 100%;
+    }
+    
+    #ongletNousTrouver .slider ul,
+    #ongletNousTrouver .slider li
+    {
+        position: relative;
+        width: 400px;
+    }
 }
