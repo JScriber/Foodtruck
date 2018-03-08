@@ -175,7 +175,7 @@ function initMap(carte, latitude, longitude) {
     // Création de la carte
     var map = new google.maps.Map(carte, {
         center: position,
-        zoom: 14,
+        zoom: 16,
         styles: style,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true

@@ -26,42 +26,42 @@
                 <ul>
                     <li>
 						<h2>Campus de Kerlann</h2>
-						<p>5 rue des jolies pierres poncées</p>
+						<p>Rue Pierre de Maupertuis, 35170 Bruz</p>
                     </li>
                     <li data-latitude="48.046807" data-longitude="-1.740896" class="map"></li>
                 </ul>
                 <ul>
                     <li>
-						<h2>Campus de xorg</h2>
-						<p>8 rue des monstres</p>
+						<h2>Lycée Bréquigny</h2>
+						<p>7 Avenue Georges Graff, 35200 Rennes</p>
 					</li>
         			<li data-latitude="48.085075" data-longitude="-1.691362" class="map"></li>
         		</ul>
         		<ul>
 					<li>
-						<h2>Rennes 8</h2>
-						<p>50 rue des rennais</p>
+						<h2>Université Rennes 2</h2>
+						<p>Place du Recteur Henri Le Moal, 35700 Rennes</p>
 					</li>
         			<li data-latitude="48.121466" data-longitude="-1.704052" class="map"></li>
         		</ul>
         		<ul>
         			<li>
-						<h2>Campus de New York City</h2>
-						<p>78 rue Steven Awkward Taison</p>
+						<h2>Campus Beaulieu</h2>
+						<p>Allée Henri Poincaré, 35700 Rennes</p>
 					</li>
         			<li data-latitude="48.115891" data-longitude="-1.637143" class="map"></li>
         		</ul>
         		<ul>
         			<li>
-						<h2>Truc much</h2>
-						<p>Rue inconnu</p>
+						<h2>Supélec</h2>
+						<p>Avenue de la Boulaie, 35510 Cesson-Sévigné</p>
 					</li>
         			<li data-latitude="48.125957" data-longitude="-1.623550" class="map"></li>
         		</ul>
         		<ul>
         			<li>
-						<h2>Boulevard des rois</h2>
-						<p>12 rue des princes</p>
+						<h2>Lycée Chateaubriand</h2>
+						<p>136 Boulevard de Vitré, 35700 Rennes</p>
 					</li>
         			<li data-latitude="48.125924" data-longitude="-1.650284" class="map"></li>
         		</ul>
