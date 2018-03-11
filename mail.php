@@ -3,6 +3,17 @@
 	<head>
 		<title>Email</title>
 		<meta charset="utf-8"/>
+		
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/logo/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/logo/favicon/site.webmanifest">
+		<link rel="mask-icon" href="images/logo/favicon/safari-pinned-tab.svg" color="#ffb500">
+		<link rel="shortcut icon" href="images/logo/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#ffb500">
+		<meta name="msapplication-config" content="images/logo/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffb500">
 	</head>
 	<body>
 		<?php 
@@ -18,6 +29,7 @@
 		<table>
 			<?php
 				$liste = "";
+				$compteur = 0;
 				while($commande = $commandes->fetch()){
 					?>
 					<tr>
@@ -49,19 +61,29 @@
 					</tr>
 					<?php
 					$liste = $liste."\n";
+					$compteur++;
 				}
 
 				$liste = str_replace("\n.", "\n..", $liste);
 				$liste = wordwrap($liste, 70, "\r\n");
 				$adresse = "comme.alamaison@laposte.net";
 
-				$message = "salut :)";
+				// Si aucune commande
+				if($compteur == 0){
+					$liste = "Aucune commande de passée.";
+
+					echo $liste."<br>";
+				}
+
 				// Envoie par mail
 				try
 				{
-					$retour = mail($adresse, "Liste des plats", $message);
+					$retour = mail($adresse, "Liste des plats", $liste);
 					if($retour){
 						echo "Email envoyé à ".$adresse."<br>";
+						// Delete the table
+						$bdd->query('DELETE FROM commande');
+						$bdd->query('ALTER TABLE commande AUTO_INCREMENT = 1');
 					}else{
 						echo "Erreur lors de l'envoi";
 					}

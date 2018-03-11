@@ -5,7 +5,16 @@
 		<link rel="stylesheet" href="styles/commun.css" type="text/css"/>
 		<link rel="stylesheet" href="styles/coupon.css" type="text/css"/>
 		
-		<link rel="shortcut icon" href="images/logo/favicon.png">
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/logo/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/logo/favicon/site.webmanifest">
+		<link rel="mask-icon" href="images/logo/favicon/safari-pinned-tab.svg" color="#ffb500">
+		<link rel="shortcut icon" href="images/logo/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#ffb500">
+		<meta name="msapplication-config" content="images/logo/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffb500">
 
 		<!-- JS files -->
 		<script type="text/javascript" src="scripts/coupon.js"></script>
