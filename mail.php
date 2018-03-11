@@ -4,6 +4,9 @@
 		<title>Email</title>
 		<meta charset="utf-8"/>
 
+		<link rel="stylesheet" type="text/css" href="styles/commun.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/email.css"/>
+
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="images/logo/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon/favicon-32x32.png">
@@ -20,6 +23,7 @@
 
 			include('includes/connexionBDD.php');
 
+			$suppression = false;
 			$commandes = $bdd->query('SELECT commande.*, plat.nom as plat, prix.prix
 				FROM plat
 				INNER JOIN commande ON commande.id_plat = plat.id_plat
@@ -81,15 +85,23 @@
 					$demain = new DateTime('now+1day');
 					$retour = mail($adresse, "Liste des plats - ".$demain->format('d/m/Y'), $liste);
 					if($retour){
-						echo "Email envoyé à ".$adresse."<br>";
-						// Delete the table
-						$bdd->query('DELETE FROM commande');
-						$bdd->query('ALTER TABLE commande AUTO_INCREMENT = 1');
+						?>
+							<p class="success">Email envoyé à <strong><?php echo $adresse; ?></strong></p>
+						<?php
+						// Supprime la table
+						if($suppression){
+							$bdd->query('DELETE FROM commande');
+							$bdd->query('ALTER TABLE commande AUTO_INCREMENT = 1');
+						}
 					}else{
-						echo "Erreur lors de l'envoi";
+						?>
+						<p class="error">Erreur lors de l'envoi</p>
+						<?php
 					}
 				} catch(Exception $e) {
-					echo "Assurez-vous que les fichiers .INI sont bien configurés. Voir sendmail.ini et php.ini";
+					?>
+					<p class="error">Assurez-vous que les fichiers .INI sont bien configurés.<br>Voir sendmail.ini et php.ini.</p>
+					<?php
 				}
 			?>
 		</table>

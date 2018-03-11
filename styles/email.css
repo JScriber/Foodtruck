@@ -1,0 +1,52 @@
+p
+{
+	padding: 15px 0;
+	padding-left: 25px;
+	font-size: 18px;
+}
+.error
+{
+	font-weight: bold;
+	color: #b51e04;
+}
+.success strong
+{
+	position: relative;
+	font-weight: medium;
+	padding-bottom: 5px;
+}
+.success strong::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 75%;
+	height: 2px;
+	background-color: #ffb300;
+}
+table
+{
+	margin-left: 30px;
+	margin-top: 8px;
+}
+tr
+{
+	height: 25px;
+	border: none;
+}
+tr:nth-child(even)
+{
+	background-color: rgba(0, 0, 0, .02);
+}
+td
+{
+	margin: 0;
+	border: none;
+	padding: 8px 15px;
+}
+
+td:first-child
+{
+	font-weight: bold;
+}
