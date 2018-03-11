@@ -3,7 +3,7 @@
 	<head>
 		<title>Email</title>
 		<meta charset="utf-8"/>
-		
+
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="images/logo/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon/favicon-32x32.png">
@@ -78,7 +78,8 @@
 				// Envoie par mail
 				try
 				{
-					$retour = mail($adresse, "Liste des plats", $liste);
+					$aujourdhui = new DateTime('now');
+					$retour = mail($adresse, "Liste des plats - ".$aujourdhui->format('d/m/Y'), $liste);
 					if($retour){
 						echo "Email envoyé à ".$adresse."<br>";
 						// Delete the table
