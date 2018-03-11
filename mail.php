@@ -78,8 +78,8 @@
 				// Envoie par mail
 				try
 				{
-					$aujourdhui = new DateTime('now');
-					$retour = mail($adresse, "Liste des plats - ".$aujourdhui->format('d/m/Y'), $liste);
+					$demain = new DateTime('now+1day');
+					$retour = mail($adresse, "Liste des plats - ".$demain->format('d/m/Y'), $liste);
 					if($retour){
 						echo "Email envoyé à ".$adresse."<br>";
 						// Delete the table
